@@ -1,0 +1,19 @@
+[1;94m · · ────── ꒰ঌ·✦·໒꒱ ────── · ·
+[1;94m · · ────── PantySmellling ────── · ·
+[1;94m · · ────── ꒰ঌ·✦·໒꒱ ────── · ·
+Sat May 30 12:17:13 PM UTC 2026
+Executing:[1;95mbun add -d wrangler@latest[0m
+bun add v1.3.14 (0d9b296a)
+Resolving dependencies
+Resolved, downloaded and extracted [262]
+Saved lockfile
+
+installed wrangler@4.95.0 with binaries:
+ - wrangler
+ - wrangler2
+
+39 packages installed [6.15s]
+[1;92mDone!
+───── ⋆⋅☆⋅⋆ ─────[0m
+───── ⋆⋅☆⋅⋆ ─────[0m
+───── ⋆⋅☆⋅⋆ ─────[0m
