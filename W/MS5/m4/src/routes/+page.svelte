@@ -6,4 +6,6 @@
   </p>
 
   <p class="fetch-data">Snifflick</p>
+
+  <a href="/blog" class="btn"> Go Blog</a>
 </div>
