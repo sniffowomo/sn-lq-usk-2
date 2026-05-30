@@ -1,12 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+/* Loading two fonts from google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Michroma&display=swap');
 
-
+/* --- Fonts section ---  */
+ 
 .audiowide-regular {
   font-family: "Audiowide", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
+.michroma-regular {
+  font-family: "Michroma", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* --- Root Pages Section --- */
 
 :root {
   --slate-dark: #040a14; /* dark slate background */
@@ -28,6 +37,14 @@ h2,
 h3 {
   color: var(--slate-light-green);
   font-weight: 600;
+}
+
+.fetch-data {
+  color: #facc15 ;
+  font-family: "Michroma";
+  font-size: 2rem;
+  background-color: black;
+  padding: 10px;
 }
 
 a {
