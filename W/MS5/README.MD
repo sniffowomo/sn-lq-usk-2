@@ -91,3 +91,13 @@ export default config
 ```
 
 - This then works
+
+Netlify Commands
+
+```sh
+# List sites
+netlify sites:list
+
+# Delete site
+netlif sites:delete <projectid not url>
+```
