@@ -1,6 +1,6 @@
 <script lang="ts">
   import './app.css'
-  const SITE_URL = 'https://lqusk1-w-ms5-m3.liqowomo.workers.dev'
+  const SITE_URL = 'https://snyf.s.gy/8rLjcX'
   const SITE_TITLE = 'MS5-M4'
   const SITE_DESCRIPTION = 'MS5-M5 Work'
   const BRAND_COLOR = '#FF2DD1'
