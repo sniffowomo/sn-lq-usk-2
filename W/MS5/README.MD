@@ -5,6 +5,7 @@
 2. [Dirz](#dirz)
 3. [Codez](#codez)
 4. [Deploying to multiple providers](#deploying-to-multiple-providers)
+   1. [Deploy to `netlify`](#deploy-to-netlify)
 
 # What ?
 
@@ -13,11 +14,11 @@
 
 # Dirz
 
-|      Dir      | What | Deploys |
-| :-----------: | :--: | :-----: |
+|      Dir      | What |                                         Deploys                                          |
+| :-----------: | :--: | :--------------------------------------------------------------------------------------: |
 | [`m1`](./m1/) |  v1  |
-| [`m2`](./m2/) |  v2  |         |
-| [`m3`](./m3/) |  v3  |
+| [`m2`](./m2/) |  v2  |                                                                                          |
+| [`m3`](./m3/) |  v3  | [`https://sn-lqusk-2-w-msa5-m3.netlify.app/`](https://sn-lqusk-2-w-msa5-m3.netlify.app/) |
 | [`m4`](./m4/) |  v4  |
 
 - `m4` - This is a continuation of the work on m3 - since liqo finished you are doing it here
@@ -52,3 +53,41 @@ const config = {
 export default config
 
 ```
+
+## Deploy to `netlify`
+
+1. This works differently and `cloudflare-auto` doesnt work
+2. You ahave to add - ` bun add -D @sveltejs/adapter-netlify`
+
+```sh
+# svelte.config.js
+
+// import ada from '@sveltejs/adapter-auto'
+import ada from '@sveltejs/adapter-netlify'
+
+/** @type {import('@sveltejs/kit').Config} */
+const config = {
+  compilerOptions: {
+    // Force runes mode for the project, except for libraries. Can be removed in svelte 6.
+    runes: ({ filename }) =>
+      filename.split(/[/\\]/).includes('node_modules') ? undefined : true,
+  },
+  kit: {
+    // adapter-auto only supports some environments, see https://svelte.dev/docs/kit/adapter-auto for a list.
+    // If your environment is not supported, or you settled on a specific environment, switch out the adapter.
+    // See https://svelte.dev/docs/kit/adapters for more information about adapters.
+    adapter: ada(),
+  },
+}
+
+export default config
+
+```
+
+3. Then add
+
+```sh
+"deploy:netlify": "bun run build && netlify deploy --prod --dir=build"
+```
+
+- This then works
