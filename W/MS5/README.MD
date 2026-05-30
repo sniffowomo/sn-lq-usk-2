@@ -14,11 +14,11 @@
 
 # Dirz
 
-|      Dir      | What |                                         Deploys                                          |
-| :-----------: | :--: | :--------------------------------------------------------------------------------------: |
+|      Dir      | What |                                              Deploys                                               |
+| :-----------: | :--: | :------------------------------------------------------------------------------------------------: |
 | [`m1`](./m1/) |  v1  |
-| [`m2`](./m2/) |  v2  |                                                                                          |
-| [`m3`](./m3/) |  v3  | [`https://sn-lqusk-2-w-msa5-m3.netlify.app/`](https://sn-lqusk-2-w-msa5-m3.netlify.app/) |
+| [`m2`](./m2/) |  v2  |   [`Vercel - https://sn-lq-usk2-w-ms5-m2.vercel.app/`](https://sn-lq-usk2-w-ms5-m2.vercel.app/)    |
+| [`m3`](./m3/) |  v3  | [`Netlify - https://sn-lqusk-2-w-msa5-m3.netlify.app/`](https://sn-lqusk-2-w-msa5-m3.netlify.app/) |
 | [`m4`](./m4/) |  v4  |
 
 - `m4` - This is a continuation of the work on m3 - since liqo finished you are doing it here
