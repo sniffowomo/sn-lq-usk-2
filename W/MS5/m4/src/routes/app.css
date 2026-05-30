@@ -1,10 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Metamorphous&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 
-.metamorphous-regular {
-  font-family: "Metamorphous", serif;
+
+.audiowide-regular {
+  font-family: "Audiowide", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
+
 
 :root {
   --slate-dark: #040a14; /* dark slate background */
@@ -14,7 +16,7 @@
 body {
   background-color: var(--slate-dark);
   color: var(--slate-light-green);
-  font-family: "Metamorphous";
+  font-family: "Audiowide";
   line-height: 1.6;
   margin: 0;
   padding: 20px;
