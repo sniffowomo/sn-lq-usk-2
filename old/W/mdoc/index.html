@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>liqowomo/lq-usk-1/tree/w1/W</title>
+
+    <!-- ========== FAVICON (PNG) ========== -->
+    <link rel="icon" type="image/webp" href="e.webp" />
+
+    <!-- ========== OPEN GRAPH / SOCIAL MEDIA META TAGS ========== -->
+    <meta
+      property="og:title"
+      content="https://github.com/liqowomo/lq-usk-1/tree/w1/W"
+    />
+    <meta property="og:description" content="Snifffing and licking" />
+    <meta property="og:image" content="e.webp" />
+    <meta property="og:image:type" content="image/webp" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- PicoCSS (light/dark auto) – base framework -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+
+    <!-- MINIMAL custom CSS: hover lift + border, text-center, button pop, and URL pill styling -->
+    <style>
+      /* minimal custom styles - only for hover lift/border, text centering, button emphasis, and url pills */
+
+      /* text-center utility */
+      .text-center {
+        text-align: center;
+      }
+
+      /* card hover effect: slight lift + border accent */
+      article {
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease,
+          border-color 0.2s ease;
+        border: 1px solid transparent;
+        border-radius: var(--pico-border-radius);
+      }
+
+      article:hover {
+        transform: translateY(-4px);
+        border-color: var(--pico-primary-border);
+        box-shadow: 0 12px 20px -12px rgba(0, 0, 0, 0.25);
+      }
+
+      /* ensure all card content centered */
+      article,
+      article header,
+      article footer,
+      article p {
+        text-align: center;
+      }
+
+      /* center the footer buttons inside cards */
+      .grid article footer {
+        display: flex;
+        justify-content: center;
+      }
+
+      /* Hero section full centering */
+      .hero-section h1,
+      .hero-section p,
+      .hero-actions {
+        text-align: center;
+      }
+
+      /* make external links / buttons STAND OUT */
+      article footer a[role="button"] {
+        transition:
+          transform 0.15s ease,
+          box-shadow 0.15s ease;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+      }
+
+      /* extra pop: slight scale on hover, stronger shadow */
+      article footer a[role="button"]:hover {
+        transform: scale(1.02);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      /* outline buttons also get distinctive hover */
+      article footer a[role="button"].outline:hover {
+        background: var(--pico-primary-focus);
+        color: var(--pico-primary-inverse);
+        border-color: var(--pico-primary);
+      }
+
+      article footer a[role="button"]:active {
+        transform: scale(0.98);
+      }
+
+      /* ============ URL PILL STYLING ============ */
+      .url-pill {
+        display: inline-block;
+        background: var(--pico-muted-border-color);
+        background-color: rgba(128, 128, 128, 0.12);
+        backdrop-filter: blur(2px);
+        padding: 0.3rem 0.85rem;
+        border-radius: 2rem;
+        font-size: 0.75rem;
+        font-family:
+          ui-monospace, "Cascadia Code", "Source Code Pro", monospace;
+        letter-spacing: 0.2px;
+        color: var(--pico-color-slate-600);
+        text-decoration: none;
+        transition: all 0.2s ease;
+        border: 1px solid transparent;
+        max-width: 90%;
+        overflow-x: auto;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        margin-bottom: 0.75rem;
+      }
+
+      /* dark mode adaptation */
+      [data-theme="dark"] .url-pill,
+      :root:has([data-theme="dark"]) .url-pill {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: var(--pico-color-slate-300);
+        border-color: rgba(255, 255, 255, 0.08);
+      }
+
+      /* pill hover effect */
+      .url-pill:hover {
+        background-color: rgba(128, 128, 128, 0.2);
+        border-color: var(--pico-primary-border);
+        color: var(--pico-primary);
+        transform: translateY(-1px);
+      }
+
+      /* make pill wrapper center-aligned */
+      .pill-wrapper {
+        text-align: center;
+        margin: 0.5rem 0 0.25rem;
+      }
+
+      article footer {
+        margin-top: 0.5rem;
+      }
+
+      .url-pill::-webkit-scrollbar {
+        height: 2px;
+      }
+
+      article header {
+        margin-bottom: 0.75rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="container text-center">
+      <!-- ================= HERO SECTION ================= -->
+      <header
+        class="hero-section"
+        style="
+          margin-top: var(--pico-spacing);
+          margin-bottom: var(--pico-spacing-xl);
+        "
+      >
+        <h1 style="--pico-typography-spacing-top: 0">
+          ✨ liqowomo/lq-usk-1/tree/w1/W <br />
+          <span
+            style="
+              font-weight: var(--pico-font-weight-normal);
+              color: var(--pico-muted-color);
+            "
+          >
+            Projects List</span
+          >
+        </h1>
+        <p
+          class="pico-color-slate-400"
+          style="
+            font-size: 1.25rem;
+            max-width: 720px;
+            margin-left: auto;
+            margin-right: auto;
+          "
+        >
+          This index website will linked to work done on sveltekit and
+          Cloudflare this itself is a pages project , ur main dev stuf will be
+          as workers. New projects are started like this
+          <code> bun create cloudflare@latest </code>
+        </p>
+        <div class="hero-actions" style="margin-top: var(--pico-spacing-lg)">
+          <a
+            href="https://github.com/liqowomo/lq-usk-1/tree/w1/W"
+            target="_blank"
+            rel="noopener noreferrer"
+            role="button"
+          >
+            Liqowomo Repo →
+          </a>
+        </div>
+      </header>
+
+      <!-- subtle divider line -->
+      <hr />
+
+      <!-- ================= GIF SECTION ================= -->
+      <div
+        class="gif-container"
+        style="text-align: center; margin: var(--pico-spacing-xl) 0"
+      >
+        <img
+          src="https://res.cloudinary.com/dzma12njh/image/upload/f_auto,q_auto/v1779459480/lq-usk-1-w1-w-mdoc.webp"
+          alt="Aunty Booty"
+          style="
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--pico-border-radius);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+          "
+          onmouseover="this.style.transform = 'scale(1.5)'"
+          onmouseout="this.style.transform = 'scale(0.5)'"
+        />
+        <p
+          class="pico-color-slate-400"
+          style="margin-top: var(--pico-spacing); font-size: 0.9rem"
+        >
+          ✨ Live preview of ongoing work
+        </p>
+      </div>
+
+      <!-- ================= CARDS SECTION ================= -->
+
+      <!-- ================= CARDS SECTION ================= -->
+      <!-- ================= CARDS SECTION ================= -->
+      <!-- ================= CARDS SECTION ================= -->
+      <section>
+        <!-- First row of cards (3 columns) -->
+        <div class="grid">
+          <!-- CARD 1 -->
+          <article>
+            <header>
+              <strong>📘 CF Workers - Sveltekit Starter Df</strong>
+            </header>
+            <p>Standard sveltekit CF</p>
+            <div class="pill-wrapper">
+              <a
+                href="https://t1.liqowomo.workers.dev/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="url-pill"
+                title="Visit documentation"
+              >
+                🔗 https://t1.liqowomo.workers.dev/
+              </a>
+            </div>
+            <footer>
+              <a
+                href="https://t1.liqowomo.workers.dev/"
+                target="_blank"
+                rel="noopener noreferrer"
+                role="button"
+                class="contrast"
+              >
+                t1 ↗
+              </a>
+            </footer>
+          </article>
+
+          <!-- CARD 2 -->
+          <article>
+            <header>
+              <strong>🎨 W/yt/y1 </strong>
+            </header>
+            <p>SVK + CFW + Drizzle + D1 Upstash Ratelimiter</p>
+            <div class="pill-wrapper">
+              <a
+                href="https://y1.liqowomo.workers.dev/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="url-pill"
+                title="GitHub repo"
+              >
+                🐙 https://y1.liqowomo.workers.dev/
+              </a>
+            </div>
+            <footer>
+              <a
+                href="https://y1.liqowomo.workers.dev/"
+                target="_blank"
+                rel="noopener noreferrer"
+                role="button"
+                class="contrast outline"
+              >
+                y1 ↗
+              </a>
+            </footer>
+          </article>
+
+          <!-- CARD 3 -->
+          <article>
+            <header>
+              <strong>⚡ . W/MS5/m1</strong>
+            </header>
+            <p>
+              Following U , baics of svk , this one has a a nice moving bg ,
+              uploaded to cloudinary
+            </p>
+            <div class="pill-wrapper">
+              <a
+                href="https://m1.liqowomo.workers.dev/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="url-pill"
+                title="Browse live examples"
+              >
+                🖥️ https://m1.liqowomo.workers.dev/
+              </a>
+            </div>
+            <footer>
+              <a
+                href="https://m1.liqowomo.workers.dev/"
+                target="_blank"
+                rel="noopener noreferrer"
+                role="button"
+                class="contrast"
+              >
+                m1 ↗
+              </a>
+            </footer>
+          </article>
+        </div>
+
+        <!-- Second row of cards -->
+        <div class="grid" style="margin-top: var(--pico-spacing-lg)">
+          <!-- CARD 4 -->
+          <article>
+            <header>
+              <strong>🖌️ W/MS5/m1 </strong>
+            </header>
+            <p>svk basics, snippets, run state , derived</p>
+            <div class="pill-wrapper">
+              <a
+                href="https://lqusk1-w-ms5-m2.liqowomo.workers.dev/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="url-pill"
+                title="Icon integration guide"
+              >
+                🎨 https://lqusk1-w-ms5-m2.liqowomo.workers.dev/
+              </a>
+            </div>
+            <footer>
+              <a
+                href="https://lqusk1-w-ms5-m2.liqowomo.workers.dev/"
+                target="_blank"
+                rel="noopener noreferrer"
+                role="button"
+                class="secondary outline"
+              >
+                .m2→
+              </a>
+            </footer>
+          </article>
+
+          <!-- CARD 5 -->
+          <article>
+            <header>
+              <strong>🌙 . </strong>
+            </header>
+            <p>.</p>
+            <div class="pill-wrapper">
+              <a
+                href="https://liqz.s.gy/oE3QHt"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="url-pill"
+                title="Theme documentation"
+              >
+                🌓 https://liqz.s.gy/oE3QHtj
+              </a>
+            </div>
+            <footer>
+              <a
+                href="https://liqz.s.gy/oE3QHt"
+                target="_blank"
+                rel="noopener noreferrer"
+                role="button"
+                class="contrast"
+              >
+                .. ↗
+              </a>
+            </footer>
+          </article>
+
+          <!-- CARD 6 -->
+          <article>
+            <header>
+              <strong>🚀 .</strong>
+            </header>
+            <p>.</p>
+            <div class="pill-wrapper">
+              <a
+                href="https://liqz.s.gy/oE3QHt"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="url-pill"
+                title="Quick start & framework integration"
+              >
+                ⚡ https://liqz.s.gy/oE3QHtj
+              </a>
+            </div>
+            <footer>
+              <a
+                href="https://liqz.s.gy/oE3QHt"
+                target="_blank"
+                rel="noopener noreferrer"
+                role="button"
+                class="outline"
+              >
+                .. ↗
+              </a>
+            </footer>
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
