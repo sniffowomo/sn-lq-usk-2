@@ -5,5 +5,5 @@
     documentation
   </p>
 
-  <p class="fetch-data">Booty Panty - This is data</p>
+  <p class="fetch-data">Snifflick</p>
 </div>

@@ -39,14 +39,6 @@ h3 {
   font-weight: 600;
 }
 
-.fetch-data {
-  color: #facc15 ;
-  font-family: "Michroma";
-  font-size: 2rem;
-  background-color: black;
-  padding: 10px;
-}
-
 a {
   color: var(--slate-light-green);
   text-decoration: underline;
@@ -109,4 +101,41 @@ button:hover {
   justify-content: center; /* Center vertically */
   gap: 1rem; /* Add space between stacked items */
   /* min-height: 100vh; Full viewport height */
+}
+
+/* --- My Custom Classes --- */
+
+.fetch-data {
+    position: relative;
+    overflow: hidden;
+
+    font-family: "Michroma", sans-serif;
+    font-size: 2rem;
+    color: #facc15;
+
+    background: #000;
+    border: 2px solid #facc15;
+    padding: 10px 20px;
+}
+
+.fetch-data::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(250, 204, 21, 0.4),
+        transparent
+    );
+
+    transform: translateX(-100%);
+    animation: scan 1.5s linear infinite;
+}
+
+@keyframes scan {
+    to {
+        transform: translateX(100%);
+    }
 }
