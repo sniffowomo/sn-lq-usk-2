@@ -8,6 +8,15 @@
 
   // Work Zone
   let colo = 'cyan'
+
+  let longvar = `
+  <center>
+  <code> This is long variable with raw html<code> <br>
+  <i> this will be called with @render function </i>
+  <center>
+  `
+  // Accordian thing
+  let open = $state(false)
 </script>
 
 <div class="flex">
@@ -23,4 +32,27 @@
   </p>
   <h3 style:colo>Shor Hand Cooloring</h3>
   <Wvd1 />
+
+  <p class="p2">Raw HTMl Rendering below from a variable</p>
+  {@html longvar}
+  <Wvd1 />
+
+  <p class="p2">Testing some Accordian thing</p>
+
+  <button onclick={() => (open = !open)}>
+    <spam>Iteam a </spam>
+    <spam class="trigger" class:open>Iteam b </spam>
+    <spam>Iteam c </spam>
+  </button>
 </div>
+
+<style>
+  .trigger {
+    display: inline-block;
+    transition: rotate 0.2s ease;
+
+    &.open {
+      rotate: 90deg;
+    }
+  }
+</style>

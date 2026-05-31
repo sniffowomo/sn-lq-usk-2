@@ -60,7 +60,7 @@ a:hover {
 /* CSS */
 
 /* From Uiverse.io by Shoh2008 */
-button {
+.btn2 {
   padding: 15px 30px;
   font-size: 18px;
   outline: none;
@@ -75,7 +75,7 @@ button {
     inset 0 0 10px #363636;
 }
 
-button:hover {
+.btn2:hover {
   animation: a 0.5s 1 linear;
 }
 
