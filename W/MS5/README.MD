@@ -84,7 +84,19 @@ export default config
 
 ```
 
-3. Then add
+3. You also need `netlify.toml`
+
+```toml
+[build]
+command = "bun run build"
+publish = "build"
+
+[build.environment]
+NODE_VERSION = "20"
+
+```
+
+4. Then add
 
 ```sh
 "deploy:netlify": "bun run build && netlify deploy --prod --dir=build"
