@@ -1,42 +1,28 @@
-# sv
+<h3 align="center"> yt-2 Learning Sv5 Basic Pussy </h3>
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+1. [What](#what)
+2. [Deployed details](#deployed-details)
 
-## Creating a project
+# What
 
-If you're seeing this, you've probably already done this step. Congrats!
+1. This is for learning basic sv5 for lick
 
-```sh
-# create a new project
-npx sv create my-app
-```
-
-To recreate this project with the same configuration:
+# Deployed details
 
 ```sh
-# recreate this project
-bun x sv@0.15.3 create --template minimal --types jsdoc --install bun y2
+🚀 Deploy complete
+────────────────────────────────────────────────────────────────
+
+   ╭─────────────────────────────── ⬥  Production deploy is live ⬥  ───────────────────────────────╮
+   │                                                                                               │
+   │             Deployed to production URL: https://sn-lq-usk-2-w-yt-yt2.netlify.app              │
+   │                                                                                               │
+   │       Unique deploy URL: https://6a1c4541b65e7bdf678eccf8--sn-lq-usk-2-w-yt-yt2.netlify.app   │
+   │                                                                                               │
+   ╰───────────────────────────────────────────────────────────────────────────────────────────────╯
+
+Build logs:         https://app.netlify.com/projects/sn-lq-usk-2-w-yt-yt2/deploys/6a1c4541b65e7bdf678eccf8
+Function logs:      https://app.netlify.com/projects/sn-lq-usk-2-w-yt-yt2/logs/functions
+Edge function Logs: https://app.netlify.com/projects/sn-lq-usk-2-w-yt-yt2/logs/edge-functions
+
 ```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```sh
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```sh
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
