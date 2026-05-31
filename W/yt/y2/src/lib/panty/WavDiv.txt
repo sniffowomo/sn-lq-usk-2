@@ -1,0 +1,8 @@
+<WaveDivider
+  speed={5}          // Scroll speed in seconds
+  glow={8}           // Glow blur radius in px
+  opacity={0.85}     // Overall container opacity
+  thickness={4}      // Base line thickness in px
+  breatheSpeed={4}   // How fast it breathes (seconds)
+  hueSpeed={6}       // Color shift speed (seconds)
+/>
