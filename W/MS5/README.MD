@@ -113,3 +113,13 @@ netlify sites:list
 # Delete site
 netlif sites:delete <projectid not url>
 ```
+
+5. `package.json` - Add these scripts
+
+```json
+"deploy:netlify:first": "bun run build && netlify deploy --prod --site-name sn-lq-usk-2-w-yt-yt2 --dir=build",
+"deploy:netlify": "bun run build && netlify deploy --prod --dir=build"
+```
+
+- Note the `deploy:netlify:first` - needed the first to setup the site
+- Then `deploy:netlify` - On all subsequent deploys
