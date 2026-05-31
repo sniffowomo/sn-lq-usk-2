@@ -15,9 +15,14 @@
 
 # Shii
 
-|            Shii            |         What         |
-| :------------------------: | :------------------: |
-| [`pjinit.sh`](./pjinit.sh) | Cmds to init project |
+|                     Shii                     |                 What                 |
+| :------------------------------------------: | :----------------------------------: |
+|          [`pjinit.sh`](./pjinit.sh)          |         Cmds to init project         |
+|            [`driz.sh`](./driz.sh)            |        Cmds Setup drizzle orm        |
+|            [`driz.md`](./driz.md)            |   Writeup using d1 with driz on CF   |
+| [`miniflareaccess.md`](./miniflareaccess.md) |    Accessing Cloudflare Miniflare    |
+|                [`yt1`](./yt1)                | yt1 - QuickTut YT CompleteGuideToSvk |
+|                [`yt2`](./yt2)                |   yt2 - Deploy Svk App to CFWorker   |
 
 # ImpCmd
 
