@@ -1,6 +1,7 @@
 <script>
   import Wvd from '$lib/panty/WavDiv.svelte'
   import Wvd2 from '$lib/panty/WaveDiv2.svelte'
+  import Wvd3 from '$lib/panty/WaveDiv3.svelte'
 
   let count = $state(0)
 </script>
@@ -16,4 +17,13 @@
   <button class="btn" onclick={() => count++}> {count}</button>
 
   <Wvd />
+
+  <Wvd3
+    thickness={0.5}
+    bumpThickness={4}
+    bumpWidth={320}
+    glow={32}
+    speed={5}
+    breatheSpeed={2}
+  />
 </div>

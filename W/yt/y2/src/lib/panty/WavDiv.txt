@@ -6,3 +6,29 @@
   breatheSpeed={4}   // How fast it breathes (seconds)
   hueSpeed={6}       // Color shift speed (seconds)
 />
+
+--- WaveDiver3.svelte---
+<AliveLine
+  thickness={2}
+  bumpThickness={6}
+  bumpWidth={140}
+  speed={8}
+/>
+
+<AliveLine
+  thickness={2}
+  bumpThickness={12}
+  bumpWidth={240}
+  glow={24}
+  speed={6}
+  breatheSpeed={2.5}
+/>
+
+<AliveLine
+  thickness={1}
+  bumpThickness={18}
+  bumpWidth={320}
+  glow={32}
+  speed={5}
+  breatheSpeed={2}
+/>
