@@ -15,6 +15,19 @@
     speed={5}
     breatheSpeed={2}
   />
+  <p>Routes Navigation</p>
+
+  <a class="btn" href="/l1"> l1 - Lesson1 </a>
+
+  <Wvd3
+    thickness={0.5}
+    bumpThickness={4}
+    bumpWidth={320}
+    glow={32}
+    speed={5}
+    breatheSpeed={2}
+  />
+
   <h1>y2 Tutorial on sv5 complete beginner to be done before svk full</h1>
 
   <Wvd2 speed={5} glow={8} thickness={5} breatheSpeed={8} hueSpeed={6} />
