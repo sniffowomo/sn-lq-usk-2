@@ -4,10 +4,10 @@
 
 <Wvd3
   thickness={0.5}
-  bumpThickness={4}
-  bumpWidth={320}
+  bumpThickness={2}
+  bumpWidth={520}
   glow={32}
-  speed={5}
+  speed={9}
   breatheSpeed={2}
 />
 <div class="flex2">
@@ -17,10 +17,10 @@
 </div>
 <Wvd3
   thickness={0.5}
-  bumpThickness={4}
-  bumpWidth={320}
+  bumpThickness={2}
+  bumpWidth={520}
   glow={32}
-  speed={5}
+  speed={9}
   breatheSpeed={2}
 />
 
