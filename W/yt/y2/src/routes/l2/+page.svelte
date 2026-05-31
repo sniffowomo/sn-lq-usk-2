@@ -39,7 +39,7 @@
 
   <p class="p2">Testing some Accordian thing</p>
 
-  <button onclick={() => (open = !open)}>
+  <button class="btn2" onclick={() => (open = !open)}>
     <spam>Iteam a </spam>
     <spam class="trigger" class:open>Iteam b </spam>
     <spam>Iteam c </spam>
