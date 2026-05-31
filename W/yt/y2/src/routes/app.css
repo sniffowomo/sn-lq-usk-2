@@ -1,0 +1,212 @@
+/* Loading two fonts from google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Michroma&family=Orbitron&display=swap');
+
+/* --- Fonts section ---  */
+ 
+.audiowide-regular {
+  font-family: "Audiowide", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.michroma-regular {
+  font-family: "Michroma", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.orbitron {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* --- Root Pages Section --- */
+
+:root {
+  --slate-dark: #040a14; /* dark slate background */
+  --slate-light-green: #86efac; /* light green (slate-toned) text */
+}
+
+body {
+  background-color: var(--slate-dark);
+  color: var(--slate-light-green);
+  font-family: "Audiowide";
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Optional: styled elements */
+h1,
+h2,
+h3 {
+  color: var(--slate-light-green);
+  font-weight: 600;
+}
+
+a {
+  color: var(--slate-light-green);
+  text-decoration: underline;
+  text-decoration-color: var(--slate-light-green);
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/* CSS */
+
+/* From Uiverse.io by Shoh2008 */
+button {
+  padding: 15px 30px;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  transition: 0.5s;
+  background: #1e1e1e;
+  cursor: pointer;
+  color: greenyellow;
+  box-shadow:
+    0 0 10px #363636,
+    inset 0 0 10px #363636;
+}
+
+button:hover {
+  animation: a 0.5s 1 linear;
+}
+
+@keyframes a {
+  0% {
+    transform: scale(0.7, 1.3);
+  }
+
+  25% {
+    transform: scale(1.3, 0.7);
+  }
+
+  50% {
+    transform: scale(0.7, 1.3);
+  }
+
+  75% {
+    transform: scale(1.3, 0.7);
+  }
+
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+.flex {
+  display: flex;
+  flex-direction: column; /* Stack vertically */
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  gap: 1rem; /* Add space between stacked items */
+  /* min-height: 100vh; Full viewport height */
+}
+
+/* --- My Custom Classes --- */
+
+.fetch-data {
+    position: relative;
+    overflow: hidden;
+
+    font-family: "Michroma", sans-serif;
+    font-size: 1rem;
+    color: #facc15;
+
+    background: #000;
+    border: 2px solid #facc15;
+    padding: 10px 20px;
+}
+
+.fetch-data::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(250, 204, 21, 0.4),
+        transparent
+    );
+
+    transform: translateX(-100%);
+    animation: scan 1.5s linear infinite;
+}
+
+@keyframes scan {
+    to {
+        transform: translateX(100%);
+    }
+}
+
+/* // This is for href styles */
+
+.btn {
+  font-family: "Orbitron";
+	display: inline-block;
+	padding: 0.5rem 1rem;
+	border: 1px solid #4f46e5;
+	border-radius: 8px;
+	text-decoration: none;
+	color: white;
+	background-color: #4f46e5;
+	font-weight: bold;
+	text-align: center;
+	transition: transform 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
+	/* breathing animation */
+	animation: breathe 2s ease-in-out infinite;
+}
+
+@keyframes breathe {
+	0%, 100% {
+		transform: scale(1);
+		box-shadow: 0 0 10px rgba(79, 70, 229, 0.4);
+	}
+	50% {
+		transform: scale(1.05);
+		box-shadow: 0 0 20px rgba(79, 70, 229, 0.6);
+	}
+}
+
+.btn:hover {
+	transform: scale(1.08); /* extra pop on hover */
+	box-shadow: 0 0 25px rgba(79, 70, 229, 0.8);
+}
+
+.active-divider {
+	height: 1px;
+	width: 100%;
+	background: rgba(255,255,255,0.1);
+	position: relative;
+	overflow: hidden;
+}
+
+.active-divider::after {
+	content: "";
+	position: absolute;
+	top: -2px;
+	left: -20%;
+	width: 20%;
+	height: 5px;
+	background: currentColor;
+	filter: blur(3px);
+	opacity: 0.8;
+	animation: sweep 3s linear infinite;
+}
+
+@keyframes sweep {
+	from {
+		left: -20%;
+	}
+	to {
+		left: 120%;
+	}
+}
