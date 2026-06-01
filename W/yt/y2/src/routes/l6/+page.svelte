@@ -1,6 +1,7 @@
 <!-- This is the lesson6 route-->
 
 <script>
+  // --////////////// Start Tag --//////////////
   // --- Imoports for lines ---
   import Navz from '$lib/co/Navz.svelte'
   import Wvd1 from '$lib/panty/WavDiv.svelte'
@@ -32,6 +33,22 @@
   $effect(() => {
     console.log(untrack(() => a) + b)
   })
+
+  // Dependency Tracking Inside Effects
+  let obj = $state({ current: 0 })
+  let arr = $state([])
+  let clickCount = $state(0)
+
+  $inspect(obj, arr)
+
+  $effect(() => {
+    JSON.stringify(obj)
+  })
+  $effect(() => {
+    console.log(arr.length)
+  })
+
+  // --////////////// EndTag --//////////////
 </script>
 
 <div class="flex">
@@ -77,6 +94,20 @@
     <code style="font-size:5rem; padding:2rem; background:black">{c}</code>
     <button class="btn" onclick={() => b++}> B = {b}</button>
   </div>
+
+  <Wvd1 />
+  <p class="p2">Dependency Tracking Inside Effects</p>
+
+  <button
+    class="btn"
+    onclick={() => {
+      obj.current++
+      arr.push(1)
+      clickCount++
+    }}
+  >
+    Update - Clicked {clickCount}</button
+  >
 
   <!-- ////// Main Body End Tag ///// -->
 </div>
