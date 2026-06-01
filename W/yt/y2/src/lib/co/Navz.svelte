@@ -16,6 +16,7 @@
   <a class="nav-btn" href="/l2"> L2 </a>
   <a class="nav-btn" href="/l3"> L3 </a>
   <a class="nav-btn" href="/l4"> L4 </a>
+  <a class="nav-btn" href="/l5"> L5 </a>
 </div>
 <Wvd3
   thickness={0.5}
