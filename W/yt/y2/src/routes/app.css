@@ -236,7 +236,7 @@ a:hover {
 }
 
 .p2:hover {
-  letter-spacing: 6px;
+  letter-spacing: 1px;
   /* Tilt/rotate around the Z-axis */
   transform: rotateZ(0.1deg);
   
