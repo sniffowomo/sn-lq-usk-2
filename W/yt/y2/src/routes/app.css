@@ -215,3 +215,165 @@ a:hover {
   font-family: "orbitron";
   color: #7DF9FF;
 }
+
+/* ==========================================
+   NAV BUTTONS
+   ========================================== */
+
+.nav-btn {
+  font-family: "Orbitron", sans-serif;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  overflow: hidden;
+
+  padding: 0.65rem 1.4rem;
+
+  color: #7DF9FF;
+  text-decoration: none;
+  letter-spacing: 1px;
+
+  background: rgba(125, 249, 255, 0.08);
+
+  border: 1px solid rgba(125, 249, 255, 0.5);
+  border-radius: 10px;
+
+  backdrop-filter: blur(4px);
+
+  box-shadow:
+    0 0 10px rgba(125, 249, 255, 0.25),
+    inset 0 0 8px rgba(125, 249, 255, 0.12);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease,
+    border-color 0.25s ease;
+
+  animation: nav-breathe 3s ease-in-out infinite;
+}
+
+/* breathing glow */
+
+@keyframes nav-breathe {
+  0%,
+  100% {
+    box-shadow:
+      0 0 10px rgba(125, 249, 255, 0.25),
+      inset 0 0 8px rgba(125, 249, 255, 0.12);
+  }
+
+  50% {
+    box-shadow:
+      0 0 20px rgba(125, 249, 255, 0.45),
+      inset 0 0 12px rgba(125, 249, 255, 0.18);
+  }
+}
+
+/* hover */
+
+.nav-btn:hover {
+  transform: translateY(-3px);
+
+  background: rgba(125, 249, 255, 0.15);
+
+  border-color: #7DF9FF;
+
+  box-shadow:
+    0 0 25px rgba(125, 249, 255, 0.55),
+    0 0 40px rgba(125, 249, 255, 0.15),
+    inset 0 0 12px rgba(125, 249, 255, 0.2);
+}
+
+/* light sweep */
+
+.nav-btn::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -150%;
+
+  width: 70%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.35),
+    transparent
+  );
+
+  transform: skewX(-25deg);
+
+  transition: left 0.6s ease;
+}
+
+.nav-btn:hover::before {
+  left: 150%;
+}
+
+/* click animations */
+
+.nav-btn:nth-child(odd):active {
+  animation:
+    click-left 0.25s ease-out,
+    nav-breathe 3s ease-in-out infinite;
+}
+
+.nav-btn:nth-child(even):active {
+  animation:
+    click-right 0.25s ease-out,
+    nav-breathe 3s ease-in-out infinite;
+}
+
+@keyframes click-left {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+
+  40% {
+    transform: scale(0.92) rotate(-6deg);
+  }
+
+  70% {
+    transform: scale(1.04) rotate(3deg);
+  }
+
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes click-right {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+
+  40% {
+    transform: scale(0.92) rotate(6deg);
+  }
+
+  70% {
+    transform: scale(1.04) rotate(-3deg);
+  }
+
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+/* keyboard focus */
+
+.nav-btn:focus-visible {
+  outline: none;
+
+  box-shadow:
+    0 0 0 2px #040a14,
+    0 0 0 4px #7DF9FF,
+    0 0 20px rgba(125, 249, 255, 0.7);
+}

@@ -11,10 +11,10 @@
   breatheSpeed={2}
 />
 <div class="flex2">
-  <a class="btn" href="/"> Home </a>
-  <a class="btn" href="/l1"> L1 </a>
-  <a class="btn" href="/l2"> L2 </a>
-  <a class="btn" href="/l3"> L3 </a>
+  <a class="nav-btn" href="/"> Home </a>
+  <a class="nav-btn" href="/l1"> L1 </a>
+  <a class="nav-btn" href="/l2"> L2 </a>
+  <a class="nav-btn" href="/l3"> L3 </a>
 </div>
 <Wvd3
   thickness={0.5}
