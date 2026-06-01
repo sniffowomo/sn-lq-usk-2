@@ -3,6 +3,7 @@
 <script>
   // --- Imoports for lines ---
   import Navz from '$lib/co/Navz.svelte'
+  import Wvd1 from '$lib/panty/WavDiv.svelte'
   import Wvd2 from '$lib/panty/WaveDiv2.svelte'
 
   // Shopping cart Example
@@ -39,7 +40,7 @@
   </ul>
 
   <p>Total from Array: {total}</p>
-  <Wvd2 />
+  <Wvd1 />
 
   <p class="p2">Side Effects Rune</p>
 

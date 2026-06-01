@@ -3,6 +3,7 @@
 <script>
   // --- Imoports for lines ---
   import Navz from '$lib/co/Navz.svelte'
+  import Wvd1 from '$lib/panty/WavDiv.svelte'
   import Wvd2 from '$lib/panty/WaveDiv2.svelte'
 
   // Derived state
@@ -41,7 +42,7 @@
     <button class="btn" onclick={() => factor++}>Factor: {factor}</button>
   </div>
 
-  <Wvd2 />
+  <Wvd1 />
   <!-- Testing Ley Loading here  -->
   <p class="p2">Derived lazy Loading testing here</p>
   <button class="btn" onclick={() => count2++} disabled={max}
