@@ -5,6 +5,7 @@
   import Navz from '$lib/co/Navz.svelte'
   import Wvd1 from '$lib/panty/WavDiv.svelte'
   import Wvd2 from '$lib/panty/WaveDiv2.svelte'
+  import { untrack } from 'svelte'
 
   let count = $state(0)
   let condition = $state(false)
@@ -21,6 +22,15 @@
   $effect(() => {
     const interval = setInterval(() => count2++, delay)
     return () => clearInterval(interval)
+  })
+
+  // Using Untracked state
+  let a = $state(0)
+  let b = $state(0)
+  let c = $derived(a + b)
+
+  $effect(() => {
+    console.log(untrack(() => a) + b)
   })
 </script>
 
@@ -58,6 +68,14 @@
       >{count2}</code
     >
     <button class="btn" onclick={() => (delay /= 2)}>Faster = {delay}</button>
+  </div>
+
+  <Wvd1 />
+  <p class="p2">Using the untracked example</p>
+  <div class="flex2">
+    <button class="btn" onclick={() => a++}> A = {a}</button>
+    <code style="font-size:5rem; padding:2rem; background:black">{c}</code>
+    <button class="btn" onclick={() => b++}> B = {b}</button>
   </div>
 
   <!-- ////// Main Body End Tag ///// -->
