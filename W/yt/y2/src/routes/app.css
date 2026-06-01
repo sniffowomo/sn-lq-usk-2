@@ -151,34 +151,49 @@ a:hover {
 
 .btn {
   font-family: "Orbitron";
-	display: inline-block;
-	padding: 0.5rem 1rem;
-	border: 1px solid #4f46e5;
-	border-radius: 8px;
-	text-decoration: none;
-	color: white;
-	background-color: #4f46e5;
-	font-weight: bold;
-	text-align: center;
-	transition: transform 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
-	/* breathing animation */
-	animation: breathe 2s ease-in-out infinite;
+  display: inline-block;
+
+  padding: 0.5rem 1rem;
+
+  border: 1px solid #4f46e5;
+  border-radius: 8px;
+
+  text-decoration: none;
+  color: white;
+  background-color: #4f46e5;
+
+  font-weight: bold;
+  text-align: center;
+
+  cursor: pointer;
+
+  /* smoother + no conflict */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  /* ONLY animate glow now */
+  animation: breathe 2s ease-in-out infinite;
 }
 
+/* breathing now only affects glow (not transform) */
 @keyframes breathe {
-	0%, 100% {
-		transform: scale(1);
-		box-shadow: 0 0 10px rgba(79, 70, 229, 0.4);
-	}
-	50% {
-		transform: scale(1.05);
-		box-shadow: 0 0 20px rgba(79, 70, 229, 0.6);
-	}
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(79, 70, 229, 0.4);
+  }
+
+  50% {
+    box-shadow: 0 0 20px rgba(79, 70, 229, 0.7);
+  }
 }
 
+/* hover now works properly */
 .btn:hover {
-	transform: scale(1.08); /* extra pop on hover */
-	box-shadow: 0 0 25px rgba(79, 70, 229, 0.8);
+  transform: scale(1.08);
+  box-shadow: 0 0 30px rgba(79, 70, 229, 0.9);
+}
+
+/* click feedback (optional but very nice) */
+.btn:active {
+  transform: scale(0.96);
 }
 
 .active-divider {
