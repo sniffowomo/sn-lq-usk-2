@@ -10,6 +10,10 @@
 
 # Deployed details
 
+[`Netlify CLi - https://sn-lq-usk-2-w-yt-y22.netlify.app/`](https://sn-lq-usk-2-w-yt-y22.netlify.app/)
+
+- Active with all ass
+
 ```sh
 
    ╭─────────────────────────────── ⬥  Production deploy is live ⬥  ───────────────────────────────╮
