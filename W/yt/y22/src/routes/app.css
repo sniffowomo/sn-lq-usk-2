@@ -337,6 +337,7 @@ h2:hover {
 h3 {
   font-size: 1.75rem;
   color: var(--text-secondary);
+  padding: 2rem;
 }
 
 h3::before,

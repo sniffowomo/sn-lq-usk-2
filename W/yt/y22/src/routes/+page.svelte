@@ -10,10 +10,11 @@
 </div>
 
 <main>
-<V1 />
+  <V1 />
   <h1>Complete SVK Learning Tutorial</h1>
   <h3>Repeat of the y1 Lesson work for re hashing and deeper learning</h3>
 
   <a href="/exa" class="link-btn">Style Examples</a>
   <a href="/p1" class="link-btn">Lesson 1 Work </a>
+  <a href="/p2" class="link-btn">Effects Study </a>
 </main>
