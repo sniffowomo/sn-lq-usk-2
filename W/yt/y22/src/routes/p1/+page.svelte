@@ -33,6 +33,7 @@
   <div class="glass-card">
     <h3 style:padding="0.2rem">Text Area Input</h3>
     <textarea value={editor.content}> ss </textarea>
+    textarea
   </div>
 
   <!-- //// Ending tag dont touch //// -->
