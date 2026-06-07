@@ -1,42 +1,16 @@
-# sv
+<h3 align="center"> y22 y1 Revision </h3>
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+1. [What](#what)
+2. [Deployed details](#deployed-details)
 
-## Creating a project
+# What
 
-If you're seeing this, you've probably already done this step. Congrats!
+1. This is for learning basic sv5 for lick
+2. This is a repeat of y1 with more focus on the actual study
 
-```sh
-# create a new project
-npx sv create my-app
-```
-
-To recreate this project with the same configuration:
+# Deployed details
 
 ```sh
-# recreate this project
-bun x sv@0.15.3 create --template minimal --types jsdoc --install bun y22
+
+
 ```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```sh
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```sh
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
