@@ -4,6 +4,5 @@
     <div class="tech-divider"></div>
   </div>
 
-  <h1>Lesson 1 Work</h1>
-  <h2>This Lesson focuses on standard ractivity</h2>
+  <h1>Lesson 1 Work - Focus on reactivity</h1>
 </main>
