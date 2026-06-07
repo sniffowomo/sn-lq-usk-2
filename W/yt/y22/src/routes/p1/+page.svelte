@@ -16,7 +16,6 @@
   <!-- //// Starting tag dont touch //// -->
   <!-- //// Starting tag dont touch //// -->
   <div class="button-group">
-    <a href="/" class="link-btn">Home </a>
     <h1>Lesson 1 Work - Focus on reactivity</h1>
     <div class="tech-divider"></div>
   </div>
@@ -32,7 +31,7 @@
   <!-- Text area section test -->
   <div class="glass-card">
     <h3 style:padding="0.2rem">Text Area Input</h3>
-    <textarea value={editor.content}> ss </textarea>
+
     textarea
   </div>
 

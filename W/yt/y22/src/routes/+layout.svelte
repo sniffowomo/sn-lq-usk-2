@@ -1,5 +1,6 @@
 <script>
   import './app.css'
+  import Navv1 from '$lib/vag/Navv1.svelte'
 
   let { children } = $props()
 
@@ -51,5 +52,7 @@
   <meta name="twitter:site" content={TWITTER_HANDLE} />
   <meta name="twitter:creator" content={TWITTER_HANDLE} />
 </svelte:head>
+
+<Navv1 />
 
 {@render children()}
