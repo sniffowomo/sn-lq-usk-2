@@ -1,5 +1,15 @@
 /* styles.css - Synthwave Greenish Theme - Complete Edition */
 
+/* ===== Fonts imports ===== */
+@import url('https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.quantico {
+  font-family: "Quantico", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 /* ===== CSS VARIABLES ===== */
 :root {
   /* Dark green background colors - MUCH DARKER */
@@ -838,6 +848,7 @@ textarea {
   border-radius: 4px;
   resize: vertical;
   transition: all 0.2s ease;
+  text-align: center;
   
 }
 
@@ -846,4 +857,18 @@ textarea:focus {
   border-color: #4caf50;
   box-shadow: 0 0 8px 2px rgba(76, 175, 80, 0.4);
   background-color: #252525;
+}
+
+/* ===== Paragraph Special ===== */
+
+.p2 {
+  font-family: 'quantico';
+  font-size: 1.5rem;
+  color: #ffffff; /* Light text color so the green glow stands out */
+  text-shadow: 
+    0 0 5px rgba(255, 255, 255, 0.8),
+    0 0 10px rgba(255, 255, 255, 0.6),
+    0 0 20px rgba(0, 255, 0, 0.8),
+    0 0 40px rgba(0, 255, 0, 0.6),
+    0 0 80px rgba(0, 255, 0, 0.4);
 }
