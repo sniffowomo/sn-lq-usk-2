@@ -1,4 +1,7 @@
 <script>
+  // --- Imports Section ---
+  import { untrack } from 'svelte'
+
   // Effects1
   let count = $state(0)
   let condition = $state(false)
@@ -18,6 +21,15 @@
     const interval = setInterval(() => count2++, delay)
     // Cleaner function since delay is being set every time
     return () => clearInterval(interval)
+  })
+
+  // Untrack values inside an effect
+  let a1 = $state(0)
+  let b1 = $state(0)
+  let a1b1sum = $derived(a1 + b1)
+
+  $effect(() => {
+    console.log(untrack(() => a1) + b1)
   })
 </script>
 
@@ -40,6 +52,7 @@
     >
   </div>
 
+  <!-- Effects Cleanup behavior  -->
   <div class="glass-card">
     <div>
       <h3>Effects Edge Case Study</h3>
@@ -57,6 +70,28 @@
         Reset : {delay}</button
       >
     </div>
+  </div>
+
+  <!-- Dont track value inside effect  -->
+  <div class="glass-card">
+    <h3>Untrack Values inside an effect</h3>
+    <button class="nav-btn" onclick={() => a1++}>A1: {a1}</button>
+    <button class="nav-btn" onclick={() => b1++}>B1: {b1}</button>
+    <button
+      class="nav-btn"
+      onclick={() => {
+        ;(a1 = 0), (b1 = 0)
+      }}>reset</button
+    >
+    <p class="p2" style:padding="2rem" style:font-size="3rem">
+      Sum = {a1b1sum}
+    </p>
+    <p style:padding="2rem">
+      Above example a1 is no tracked so even though we are pressing the button
+      its not seen in console.log , ubut only when b1 starts incremeneting
+      values then the sum is printed in console.log , but since you are calling
+      the variable in the p tag its still visible
+    </p>
   </div>
 
   <!-- //// Ending tag dont touch //// -->
