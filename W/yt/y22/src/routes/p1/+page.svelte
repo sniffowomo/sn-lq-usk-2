@@ -7,7 +7,7 @@
 
   // Section on editor state
   let editor = $state({
-    content: `BotySniff`,
+    content: `Suck N Fuck`,
   })
 
   // Section on derived value testing

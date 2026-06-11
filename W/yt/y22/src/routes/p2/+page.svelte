@@ -31,6 +31,26 @@
   $effect(() => {
     console.log(untrack(() => a1) + b1)
   })
+
+  // --- Dependency Tracking in array ---
+  let obj = $state({ current: 0 })
+  let arr = $state([])
+
+  // Effect on the above objects
+  $effect(() => {
+    console.log(obj.current)
+    // Now storing this object inside local storage then can the whole object will be tracked
+    localStorage.setItem('obj', JSON.stringify(obj))
+  })
+
+  // Effect on the above array
+  $effect(() => {
+    console.log(arr)
+  })
+
+  $effect(() => {
+    console.log(arr.length)
+  })
 </script>
 
 <main>
@@ -92,6 +112,20 @@
       values then the sum is printed in console.log , but since you are calling
       the variable in the p tag its still visible
     </p>
+  </div>
+
+  <!-- Dont track value inside effect - Vid- 41:@7 onwards  -->
+  <div class="glass-card">
+    <h3>Dependency Tracking</h3>
+    <button
+      class="nav-btn"
+      onclick={() => {
+        obj.current++
+        arr.push(1)
+      }}
+    >
+      Update
+    </button>
   </div>
 
   <!-- //// Ending tag dont touch //// -->
