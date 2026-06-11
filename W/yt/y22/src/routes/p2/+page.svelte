@@ -1,6 +1,6 @@
 <script>
   // --- Imports Section ---
-  import { untrack } from 'svelte'
+  import { onDestroy, onMount, untrack } from 'svelte'
 
   // Effects1
   let count = $state(0)
@@ -36,6 +36,9 @@
   let obj = $state({ current: 0 })
   let arr = $state([])
 
+  // The correct way is to use inspect
+  $inspect(obj, arr)
+
   // Effect on the above objects
   $effect(() => {
     console.log(obj.current)
@@ -50,6 +53,25 @@
 
   $effect(() => {
     console.log(arr.length)
+  })
+
+  // -- Using Effect to synchronize state ---
+  let count5 = $state(0)
+  let double5 = $state(0)
+
+  $effect(() => {
+    double5 = count5 * 2
+  })
+
+  // -- onMount function to run something once ---
+  onMount(() => {
+    console.log('Component Fucked')
+    // return function
+    return () => console.table('  Component Removed')
+  })
+
+  onDestroy(() => {
+    console.log('Component Raped')
   })
 </script>
 
@@ -126,6 +148,31 @@
     >
       Update
     </button>
+  </div>
+
+  <!-- Dont track value inside effect - Vid- 41:@7 onwards  -->
+  <div class="glass-card">
+    <h3>Not using effect to synchronize state</h3>
+
+    <button
+      class="nav-btn"
+      onclick={() => {
+        count5++
+        console.log({ count, double5 })
+      }}
+    >
+      {double5}
+    </button>
+  </div>
+
+  <!-- OnMount Lifecycle Function - Vid 46:01 -->
+  <div class="glass-card">
+    <h3>OnMount Lifecycle Function</h3>
+    <p>
+      These discussion on why you dont need effects , because of onMount
+      lifecycle function - Want to run something once and then run run a
+      clearner functin when removed from dom
+    </p>
   </div>
 
   <!-- //// Ending tag dont touch //// -->
