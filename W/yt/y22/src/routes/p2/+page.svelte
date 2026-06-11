@@ -70,6 +70,7 @@
     return () => console.table('  Component Removed')
   })
 
+  // Cleaner function
   onDestroy(() => {
     console.log('Component Raped')
   })
@@ -172,6 +173,12 @@
       These discussion on why you dont need effects , because of onMount
       lifecycle function - Want to run something once and then run run a
       clearner functin when removed from dom
+    </p>
+    <p>
+      When to use effects, should be used as a last resort , when you need to
+      synchronize with some external system that doesnt understand svelte
+      reactivity Example
+      <li>Fetching data an api Working with dom directrly</li>
     </p>
   </div>
 

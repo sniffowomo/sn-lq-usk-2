@@ -17,4 +17,5 @@
   <a href="/exa" class="link-btn">Style Examples</a>
   <a href="/p1" class="link-btn">Lesson 1 Work </a>
   <a href="/p2" class="link-btn">Effects Study </a>
+  <a href="/p3" class="link-btn">Effects Study 2 </a>
 </main>
