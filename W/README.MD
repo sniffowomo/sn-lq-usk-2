@@ -16,5 +16,6 @@
 |   [`mdoc`](./mdoc)   | [`Main Index Site`](https://mdoc-5ty.pages.dev/) |
 |     [`yt`](./yt)     |                     YT Panty                     |
 |    [`MS5`](./MS5)    |                UMasterSveltekit5                 |
+|    [`pwa`](./pwa)    |                  svk pwa tests                   |
 |    [`ncl`](./ncl)    |                 Logs of `ncl.sh`                 |
 | [`ncl.sh`](./ncl.sh) |                 Cleanign script                  |
