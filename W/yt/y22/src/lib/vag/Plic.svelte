@@ -1,22 +1,12 @@
 <script>
-  let gifUrl = $state('')
-  let loading = $state(false)
-
-  async function getGif() {
-    loading = true
-    const res = await fetch('/hent')
-    const data = await res.json()
-    gifUrl = data.link
-    loading = false
-  }
+  import { enhance } from '$app/forms'
+  let { form } = $props()
 </script>
 
-<div class="stack">
-  <button onclick={getGif} disabled={loading} class="nav-btn">
-    {loading ? 'Loading...' : 'Get Hentai GIF'}
-  </button>
+<form method="POST" action="?/getGif" use:enhance>
+  <button type="submit" class="nav-btn">Random GIF</button>
+</form>
 
-  {#if gifUrl}
-    <img src={gifUrl} alt="Hentai GIF" />
-  {/if}
-</div>
+{#if form?.gifUrl}
+  <img src={form.gifUrl} alt="GIF" />
+{/if}
