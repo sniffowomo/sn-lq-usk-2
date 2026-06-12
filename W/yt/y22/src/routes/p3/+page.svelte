@@ -3,8 +3,34 @@
 -->
 
 <script>
-  let pokemon = $state('baguna')
+  import { getAbortSignal } from 'svelte'
+
+  let pokemon = $state('charizard')
   let image = $state('')
+  let error = $state('')
+
+  // Async function which is idiomatic
+  async function getPokemon(pokemon) {
+    const baseUrl = 'https://pokeapi.co/api/v2/pokemon/'
+    const response = await fetch(`${baseUrl}/${pokemon}`, {
+      signal: getAbortSignal(),
+    })
+    if (!response.ok) throw new Error('OOPZ')
+    return response.json()
+  }
+
+  // Above function now needs an effect
+  $effect(() => {
+    error = '' // Clear error before each request
+    getPokemon(pokemon)
+      .then((data) => {
+        image = data.sprites.front_default
+      })
+      .catch((err) => {
+        error = `Pokemon "${pokemon}" not found!` // Show error message
+        image = '' // Clear image
+      })
+  })
 </script>
 
 <main>
@@ -27,7 +53,11 @@
         oninput={(e) => (pokemon = e.target.value)}
       />
 
-      <img src={image} alt="PantyMon" />
+      {#if error}
+        <div style="color: red; padding: 0.5rem;">{error}</div>
+      {:else if image}
+        <img src={image} alt="PantyMon" style:width="300px" />
+      {/if}
     </div>
   </div>
 
