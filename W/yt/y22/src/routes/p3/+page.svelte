@@ -4,6 +4,7 @@
 
 <script>
   import { getAbortSignal } from 'svelte'
+  import Plic from '$lib/vag/Plic.svelte'
 
   let pokemon = $state('charizard')
   let image = $state('')
@@ -31,6 +32,20 @@
         image = '' // Clear image
       })
   })
+
+  // Testing own API end point
+  let gifUrl = $state('')
+  let loading = $state(false)
+
+  async function getGif() {
+    loading = true
+    const res = await fetch(
+      'https://api.purrbot.site/v2/img/nsfw/pussylick/gif',
+    )
+    const data = await res.json()
+    gifUrl = data.link
+    loading = false
+  }
 </script>
 
 <main>
@@ -43,6 +58,9 @@
 
   <div class="glass-card">
     <h3>Pokemon Search function</h3>
+    <p style:padding="1rem">
+      As you type the name of the pokemon it will start showing up
+    </p>
 
     <!-- Input Search -->
     <div class="stack">
@@ -59,6 +77,11 @@
         <img src={image} alt="PantyMon" style:width="300px" />
       {/if}
     </div>
+  </div>
+
+  <div class="glass-card">
+    <h3>Testing My own Api Call method</h3>
+    <Plic />
   </div>
 
   <!-- //// Ending tag dont touch //// -->
