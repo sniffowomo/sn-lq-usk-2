@@ -7,6 +7,10 @@
   <button type="submit" class="nav-btn">Random GIF</button>
 </form>
 
+{#if form?.error}
+  <p style="color:red">Error: {form.error}</p>
+{/if}
+
 {#if form?.gifUrl}
   <img src={form.gifUrl} alt="GIF" />
 {/if}
