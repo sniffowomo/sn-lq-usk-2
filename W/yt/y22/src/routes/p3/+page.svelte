@@ -3,8 +3,13 @@
 -->
 
 <script>
+  // --- Imports --
   import { getAbortSignal } from 'svelte'
   import Plic from '$lib/vag/Plic.svelte'
+  import { gsap } from 'gsap'
+  import { Flip } from 'gsap/Flip'
+
+  // -- vars ---
   let { form } = $props()
 
   let pokemon = $state('charizard')
@@ -33,6 +38,15 @@
         image = '' // Clear image
       })
   })
+
+  // --- Gsap effets pre code ---
+  gsap.registerPlugin(Flip)
+
+  let items = $state([...Array(10).keys()])
+
+  function shuffle() {
+    items = items.sort(() => Math.random() - 0.5)
+  }
 </script>
 
 <main>
@@ -69,6 +83,27 @@
   <div class="glass-card">
     <h3>Testing My own Api Call method</h3>
     <Plic {form} />
+  </div>
+
+  <div class="glass-card">
+    <h3>
+      <code>effects.pre</code> Need to do something before the dom updates
+    </h3>
+
+    <div class="stack">
+      <div class="flipboard-numbers">
+        {#each items as item (item)}
+          <span>{item}</span>
+        {/each}
+      </div>
+      <button
+        class="nav-btn"
+        onclick={shuffle}
+        style="padding: 2rem; font-size: 2rem; margin-top: 1rem; border-radius: 99px;"
+      >
+        Shuffle</button
+      >
+    </div>
   </div>
 
   <!-- //// Ending tag dont touch //// -->

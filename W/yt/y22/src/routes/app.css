@@ -1044,3 +1044,86 @@ input::placeholder {
         max-width: 100%;
     }
 }
+
+/* Apply this class to your container div - styles the numbers directly */
+.flipboard-numbers {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.25rem;
+  justify-items: center;
+  align-items: center;
+  margin: 2rem auto;
+  padding: 1rem;
+  max-width: 800px;
+  width: 100%;
+}
+
+/* Styles each number as a flipboard tile */
+.flipboard-numbers > * {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  max-width: 120px;
+  background: #071a0e;
+  background-image: radial-gradient(circle at 35% 30%, rgba(0, 255, 136, 0.08) 0%, transparent 70%);
+  border-radius: 12px;
+  border: 1px solid rgba(0, 255, 136, 0.3);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(0, 255, 136, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Quantico', 'Courier New', monospace;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #00ff88;
+  text-shadow: 0 0 8px rgba(0, 255, 136, 0.7), 0 0 15px rgba(0, 255, 136, 0.4);
+}
+
+/* Center split line */
+.flipboard-numbers > *::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 136, 0.5), rgba(0, 229, 255, 0.6), rgba(0, 255, 136, 0.5), transparent);
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* Top accent line */
+.flipboard-numbers > *::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 15%;
+  width: 70%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 136, 0.35), transparent);
+  pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 680px) {
+  .flipboard-numbers {
+    gap: 0.75rem;
+  }
+  .flipboard-numbers > * {
+    font-size: 2.5rem;
+    max-width: 85px;
+  }
+}
+
+@media (max-width: 480px) {
+  .flipboard-numbers {
+    gap: 0.5rem;
+  }
+  .flipboard-numbers > * {
+    font-size: 1.8rem;
+    max-width: 65px;
+  }
+  .flipboard-numbers > *::before {
+    height: 1px;
+  }
+}
