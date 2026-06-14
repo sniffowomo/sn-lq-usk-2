@@ -2,7 +2,7 @@
   // --- Imports Section ---
   import { onDestroy, onMount, untrack } from 'svelte'
 
-  // Effects1
+  // Effects1 = as
   let count = $state(0)
   let condition = $state(false)
 
