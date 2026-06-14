@@ -6,8 +6,8 @@
   // --- Imports --
   import { getAbortSignal } from 'svelte'
   import Plic from '$lib/vag/Plic.svelte'
-  import { gsap } from 'gsap'
-  import { Flip } from 'gsap/Flip'
+  import gsap from 'gsap'
+  import Flip from 'gsap/Flip'
 
   // -- vars ---
   let { form } = $props()
