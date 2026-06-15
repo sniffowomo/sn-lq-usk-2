@@ -4,10 +4,11 @@
 
 <script>
   // --- Imports --
-  import { getAbortSignal } from 'svelte'
+  import { getAbortSignal, tick, onMount } from 'svelte'
   import Plic from '$lib/vag/Plic.svelte'
-  import gsap from 'gsap'
-  import Flip from 'gsap/Flip'
+
+  // import gsap from 'gsap'
+  // import Flip from 'gsap/Flip'
 
   // -- vars ---
   let { form } = $props()
@@ -15,6 +16,9 @@
   let pokemon = $state('charizard')
   let image = $state('')
   let error = $state('')
+
+  let gsap = $state()
+  let Flip = $state()
 
   // Async function which is idiomatic
   async function getPokemon(pokemon) {
@@ -39,19 +43,28 @@
       })
   })
 
-  // --- Gsap effets pre code ---
-  gsap.registerPlugin(Flip)
-
   let items = $state([...Array(10).keys()])
 
   function shuffle() {
     items = items.toSorted(() => Math.random() - 0.5)
   }
 
+  // Recommended solution
+  onMount(async () => {
+    const gsapModule = await import('gsap')
+    const FlipModule = await import('gsap/Flip')
+
+    gsap = gsapModule.gsap
+    Flip = FlipModule.Flip
+
+    gsap.registerPlugin(Flip)
+  })
+
   $effect.pre(() => {
+    if (!gsap || !Flip || typeof window === 'undefined') return
     items
     const state = Flip.getState('.flipboard-numbers > span')
-    queueMicrotask(() => {
+    tick().then(() => {
       Flip.from(state, {
         duration: 1,
         stagger: 0.01,
