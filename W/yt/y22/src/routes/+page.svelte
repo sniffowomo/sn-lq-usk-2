@@ -12,10 +12,18 @@
 <main>
   <V1 />
   <h1>Complete SVK Learning Tutorial</h1>
-  <h3>Repeat of the y1 Lesson work for re hashing and deeper learning</h3>
+  <h3>Each one of the lessons in their own page, click button to jump</h3>
 
-  <a href="/exa" class="link-btn">Style Examples</a>
-  <a href="/p1" class="link-btn">Lesson 1 Work </a>
-  <a href="/p2" class="link-btn">Effects Study </a>
-  <a href="/p3" class="link-btn">Effects Study 2 </a>
+  <div class="glass-card">
+    <h3 style:padding="2rem">Click Button to Jump</h3>
+    <div class="stack">
+      <a href="/exa" class="link-btn">exa - Style Examples</a>
+      <a href="/p1" class="link-btn">p1 - Lesson 1 Work </a>
+      <a href="/p2" class="link-btn">p2 - Effects Study </a>
+      <a href="/p3" class="link-btn">p3 - Effects Study 2 </a>
+      <a href="/p4" class="link-btn"
+        >p4 - <code>$state()</code> inside function and classes
+      </a>
+    </div>
+  </div>
 </main>
