@@ -12,7 +12,12 @@
 <main>
   <V1 />
   <h1>Complete SVK Learning Tutorial</h1>
-  <h3>Each one of the lessons in their own page, click button to jump</h3>
+  <h3>
+    Each one of the lessons in their own page, click button to jump, Vid Source
+    - <a href="https://youtu.be/B2MhkPtBWs4?si=r0ZmkaMXq_-N0rGr" target="_blank"
+      >yTDL</a
+    >
+  </h3>
 
   <div class="glass-card">
     <h3 style:padding="2rem">Click Button to Jump</h3>
