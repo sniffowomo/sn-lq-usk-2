@@ -49,7 +49,8 @@
     items = items.toSorted(() => Math.random() - 0.5)
   }
 
-  // Recommended solution
+  // Recommended solution -
+  // Note the onMount function ensure that the code insde it run on client side
   onMount(async () => {
     const gsapModule = await import('gsap')
     const FlipModule = await import('gsap/Flip')
