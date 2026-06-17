@@ -6,6 +6,8 @@
 -->
 
 <script>
+  import { Counter4 } from '$lib/counter.svelte'
+
   // ---F1 Function for illuistrating $state() inside a function ---
   function createCounter(initial) {
     let count = $state(initial)
@@ -36,6 +38,9 @@
     }
   }
   let counter3 = new Counter(0)
+
+  //  F4 - Importing counter class from lib/counter.svelte.js
+  let counter4 = new Counter4(9)
 </script>
 
 <main>
@@ -93,6 +98,16 @@
       }}
     >
       {counter3.count}
+    </button>
+
+    <p>Imorting the Counter4 function for lib/counter.svelte.js</p>
+    <button
+      class="nav-btn"
+      onclick={() => {
+        counter4.count++
+      }}
+    >
+      {counter4.count}
     </button>
   </div>
 
