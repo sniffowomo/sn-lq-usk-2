@@ -9,10 +9,33 @@
   // ---F1 Function for illuistrating $state() inside a function ---
   function createCounter(initial) {
     let count = $state(initial)
-    return { count }
+    return {
+      get count() {
+        return count
+      },
+      set count(v) {
+        count = v
+      },
+    }
   }
 
   let counter = createCounter(0)
+
+  // ---F2 Function for illuistrating $state() inside a function  similar to above - Deeply reactive proxy---
+  function createCounter2(initial) {
+    let counter = $state({ count: initial })
+    return counter
+  }
+
+  let counter2 = createCounter2(0)
+
+  //  F3 - Making reactivity inside classes
+  class Counter {
+    constructor(initial) {
+      this.count = $state(initial)
+    }
+  }
+  let counter3 = new Counter(0)
 </script>
 
 <main>
@@ -46,6 +69,30 @@
       }}
     >
       {counter.count}
+    </button>
+
+    <p>Second version of above using deep reactivityy</p>
+    <button
+      class="nav-btn"
+      onclick={() => {
+        counter2.count++
+      }}
+    >
+      {counter2.count}
+    </button>
+  </div>
+
+  <!-- Reactive states with classes, encouraged by Svelte -->
+  <div class="glass-card">
+    <h3>Deep Reactive state with Function Classes</h3>
+    <p>Using function class</p>
+    <button
+      class="nav-btn"
+      onclick={() => {
+        counter3.count++
+      }}
+    >
+      {counter3.count}
     </button>
   </div>
 
