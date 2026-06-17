@@ -6,7 +6,7 @@
 -->
 
 <script>
-  import { Counter4 } from '$lib/counter.svelte'
+  import { Counter4 } from '$lib/funcs/counter.svelte'
 
   // ---F1 Function for illuistrating $state() inside a function ---
   function createCounter(initial) {
@@ -41,6 +41,17 @@
 
   //  F4 - Importing counter class from lib/counter.svelte.js
   let counter4 = new Counter4(9)
+
+  //F5 - Passing ractivity to functions aand classes
+
+  // Making a doubler class
+  class Doubler {
+    constructor(count) {
+      this.count = $derived(count() ** 2)
+    }
+  }
+  let count5 = $state(0)
+  let doubled = new Doubler(() => count5)
 </script>
 
 <main>
@@ -108,6 +119,21 @@
       }}
     >
       {counter4.count}
+    </button>
+  </div>
+
+  <!-- F45 Function work here - Passing state to functions and classes -->
+  <div class="glass-card">
+    <h3>Passing State to functions and classes</h3>
+
+    <p>This button is for illustrating the class function F5</p>
+    <button
+      class="nav-btn"
+      onclick={() => {
+        count5++
+      }}
+    >
+      {doubled.count}
     </button>
   </div>
 

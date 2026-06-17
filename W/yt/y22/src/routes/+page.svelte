@@ -21,14 +21,14 @@
 
   <div class="glass-card">
     <h3 style:padding="2rem">Click Button to Jump</h3>
-    <div class="stack">
-      <a href="/exa" class="link-btn">exa - Style Examples</a>
-      <a href="/p1" class="link-btn">p1 - Lesson 1 Work </a>
-      <a href="/p2" class="link-btn">p2 - Effects Study </a>
-      <a href="/p3" class="link-btn">p3 - Effects Study 2 </a>
-      <a href="/p4" class="link-btn"
-        >p4 - <code>$state()</code> inside function and classes
-      </a>
-    </div>
+
+    <a href="/exa" class="link-btn">exa - Style Examples</a>
+    <a href="/p1" class="link-btn">p1 - Lesson 1 Work </a>
+    <a href="/p2" class="link-btn">p2 - Effects Study </a>
+    <a href="/p3" class="link-btn">p3 - Effects Study 2 </a>
+    <a href="/p4" class="link-btn"
+      >p4 - <code>$state()</code> inside function and classes
+    </a>
+    <a href="/p5" class="link-btn">p5 - Avoiding $effect() </a>
   </div>
 </main>
