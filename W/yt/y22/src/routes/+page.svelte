@@ -29,5 +29,6 @@
       >p4 - <code>$state()</code> inside function and classes
     </a>
     <a href="/p5" class="link-btn">p5 - Avoiding $effect() </a>
+    <a href="/p6" class="link-btn">p6 - Signals </a>
   </div>
 </main>
