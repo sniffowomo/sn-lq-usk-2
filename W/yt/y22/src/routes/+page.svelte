@@ -10,7 +10,6 @@
 </div>
 
 <main>
-  <V1 />
   <h1>Complete SVK Learning Tutorial</h1>
   <h3>
     Each one of the lessons in their own page, click button to jump, Vid Source

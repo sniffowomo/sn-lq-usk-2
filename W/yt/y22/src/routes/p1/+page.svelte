@@ -41,8 +41,10 @@
   <!-- //// Starting tag dont touch //// -->
   <!-- //// Starting tag dont touch //// -->
   <div class="button-group">
-    <h1>Lesson 1 Work - Focus on reactivity</h1>
-    <h2>Examining svk reactivity, <code>state , derived, button actions</code></h2>
+    <h1>p1 - Lesson 1 Work - Focus on reactivity</h1>
+    <h2>
+      Examining svk reactivity, <code>state , derived, button actions</code>
+    </h2>
     <div class="tech-divider"></div>
   </div>
 

@@ -81,7 +81,7 @@
   <!-- //// Starting tag dont touch //// -->
   <!-- //// Starting tag dont touch //// -->
 
-  <h1>Effects Study</h1>
+  <h1>p2 - Effects Study</h1>
   <div class="tech-divider"></div>
 
   <div class="glass-card">

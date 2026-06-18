@@ -80,7 +80,7 @@
   <!-- //// Starting tag dont touch //// -->
   <!-- //// Starting tag dont touch //// -->
 
-  <h1>Effects Study 2</h1>
+  <h1>p3 - Effects Study 2</h1>
   <div class="tech-divider"></div>
 
   <!-- Gsap animation flip here -->

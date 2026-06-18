@@ -39,7 +39,7 @@ let user = $state({
 </script>
 
 <main>
-  <h1>Synthwave Green Theme</h1>
+  <h1>EXA - Synthwave Green Theme</h1>
   <h2>Frosted Glass & Neon Dreams</h2>
   <h3>Techy Futuristic Interface</h3>
 
