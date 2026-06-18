@@ -30,5 +30,6 @@
     </a>
     <a href="/p5" class="link-btn">p5 - Avoiding $effect() </a>
     <a href="/p6" class="link-btn">p6 - Signals </a>
+    <a href="/p7" class="link-btn">p7 - Logic In Templaes </a>
   </div>
 </main>
