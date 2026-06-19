@@ -9,6 +9,7 @@
     { id: 2, fetish: 'ass', done: true },
     { id: 3, fetish: 'armpit', done: false },
     { id: 4, fetish: 'panty', done: true },
+    { id: 5, fetish: 'booty', done: true },
   ])
 </script>
 

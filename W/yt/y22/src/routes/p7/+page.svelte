@@ -5,6 +5,8 @@ p7 - Using logics in templates - Meaning adding functional statemenents inside h
 <script>
   // ifblock code written seperately and imported
   import Ifb from './co/ifblock.svelte'
+
+  // Loops - Note that lop2 is jus stylized fromn of Lo1
   import Lo1 from './co/loop1.svelte'
   import Lo2 from './co/loop2.svelte'
 </script>
@@ -38,6 +40,11 @@ p7 - Using logics in templates - Meaning adding functional statemenents inside h
       <Lo1 />
       <Lo2 />
     </div>
+  </div>
+
+  <!-- F3 - Looping over blocks without as , for grid -->
+  <div class="glass-card">
+    <h3>F3 - Looping without <code>as</code> for grid</h3>
   </div>
 
   <!-- ////// END MAN TAG ////// -->
