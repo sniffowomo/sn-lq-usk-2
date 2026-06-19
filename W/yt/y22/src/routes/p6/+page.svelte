@@ -1,6 +1,7 @@
 <!--
 P6- Focus on Signals - Explaining how signals work
 1. What is Signal - Bascially container holds values and subscribers
+2. Code below , writing the signals manually in js and then executing inside the button
 -->
 
 <script>
@@ -33,6 +34,7 @@ P6- Focus on Signals - Explaining how signals work
     signal.subscribers.forEach((effect) => effect())
   }
 
+  // On mount meaning - It will run clien side
   onMount(() => {
     let count = state(0)
     let btn = document.querySelector('button')
