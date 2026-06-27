@@ -3,6 +3,7 @@
 
   let codeContent = `
   <code> Code Content Test </code>
+  <code> {@hyml xxx} Fragment rendered block </code>
   `
 
   // Section on editor state
