@@ -61,6 +61,7 @@
     gsap.registerPlugin(Flip)
   })
 
+  // Using the effect pre rune - For the gsap animation
   $effect.pre(() => {
     if (!gsap || !Flip || typeof window === 'undefined') return
     items
