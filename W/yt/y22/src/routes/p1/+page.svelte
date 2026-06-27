@@ -35,6 +35,16 @@
     const item = cart.find((i) => i.item === itemName)
     if (item) item.total += 1 // Just mutate directly!
   }
+
+  // Function to set the card
+
+  function resetCard() {
+    cart = [
+      { item: 'Booty', total: 5 },
+      { item: 'Panty', total: 2 },
+      { item: 'Funda', total: 9 },
+    ]
+  }
 </script>
 
 <main>
@@ -86,6 +96,7 @@
         <button class="nav-btn" onclick={() => bumpUp(item.item)}>+</button>
       </div>
     {/each}
+    <button class="nav-btn" onclick={() => resetCard()}>Reset</button>
   </div>
 
   <!-- //// Ending tag dont touch //// -->
