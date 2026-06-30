@@ -6,6 +6,7 @@
   // F1 - Loading states
   let status = $state('loading')
 
+  // Function that gets called by the button
   function cycleStatus() {
     if (status === 'loading') {
       status = 'error'
@@ -28,7 +29,9 @@
   Reset: {status}
 </button>
 
-<!-- Using conditiona for the status -->
+<!-- Using conditiona for the status 
+- Status appears below the buttons
+-->
 {#if status === 'loading'}
   <p style="padding:1rem; color:blue">Loading</p>
 {:else if status === 'success'}
@@ -36,5 +39,5 @@
 {:else if status === 'error'}
   <p style="padding:1rem; color:red">Error</p>
 {:else}
-  <p style="padding:1rem; color:red; font-size:5rem">Fuck off</p>
+  <p style="padding:1rem; color:red; font-size:2rem">Fuck off</p>
 {/if}
