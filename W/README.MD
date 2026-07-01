@@ -19,3 +19,4 @@
 |    [`pwa`](./pwa)    |                  svk pwa tests                   |
 |    [`ncl`](./ncl)    |                 Logs of `ncl.sh`                 |
 | [`ncl.sh`](./ncl.sh) |                 Cleanign script                  |
+|    [`opc`](./opc)    |                 OpenCode Testing                 |
