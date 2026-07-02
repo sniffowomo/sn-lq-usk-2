@@ -1,4 +1,4 @@
-// <reference path="./types.ts" />
+import type { Question } from './types.ts';
 
 export const svelteQuestions: Question[] = [
   {
@@ -76,7 +76,7 @@ export const svelteQuestions: Question[] = [
       "store('name', default)"
     ],
     answer: 0,
-    explanation: "writable() is the standard store function from Svelte's run run system.",
+    explanation: "writable() is the standard store function from Svelte's store system.",
     difficulty: "Intermediate"
   },
   {

@@ -1,19 +1,21 @@
-// <reference path="./types.ts" />
+<script lang="ts">
+interface Props {
+  value: number;
+  max?: number;
+  size?: "sm" | "md" | "lg";
+  class?: string;
+}
 
-let { class: className = "", size = "md" } = $props<{ class?: string; size?: "sm" | "md" | "lg" }>();
+let { value = 0, max = 100, size = "md", class: className = "" }: Props = $props();
 
-const sizeStyles = {
-  sm: "h-1",
-  md: "h-2",
-  lg: "h-3",
-};
+const pct = $derived(max > 0 ? Math.min(Math.round((value / max) * 100), 100) : 0);
 
-const progressBarStyles = "w-full bg-surface-800 rounded-full overflow-hidden shadow-inner";
+const heights: Record<string, string> = { sm: "h-1", md: "h-2", lg: "h-3" };
+</script>
 
-const progressFillStyles = "h-full bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600 transition-all duration-500 ease-out rounded-full relative overflow-hidden";
-
-const shimmerStyles = "absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out";
-
-const sizeClass = $derived(sizeStyles[size]);
-const progressClasses = $derived(`${progressBarStyles} ${className}`);
-const fillClasses = $derived(`${progressFillStyles} ${sizeClass}`);
+<div class="w-full bg-surface-800 rounded-full overflow-hidden shadow-inner {heights[size]} {className}">
+  <div
+    class="h-full bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600 rounded-full transition-all duration-500 ease-out"
+    style="width: {pct}%"
+  ></div>
+</div>

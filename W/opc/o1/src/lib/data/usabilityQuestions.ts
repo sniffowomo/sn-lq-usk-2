@@ -1,4 +1,4 @@
-// <reference path="./types.ts" />
+import type { Question } from './types.ts';
 
 export const usabilityQuestions: Question[] = [
   {
@@ -11,7 +11,7 @@ export const usabilityQuestions: Question[] = [
       "Help and documentation"
     ],
     answer: 0,
-    explanation: "Visibility of system status ensures users always know what’s happening, like loading indicators or confirmation messages.",
+    explanation: "Visibility of system status ensures users always know what's happening, like loading indicators or confirmation messages.",
     difficulty: "Beginner"
   },
   {
@@ -48,7 +48,8 @@ export const usabilityQuestions: Question[] = [
       "Extraneous memory load",
       "Intrinsic cognitive load",
       "Extraneous cognitive load"
-    ],n    answer: 3,
+    ],
+    answer: 1,
     explanation: "Extraneous memory load occurs when users must remember information that could be displayed to them.",
     difficulty: "Intermediate"
   },
@@ -86,7 +87,8 @@ export const usabilityQuestions: Question[] = [
       "Jakob's Law",
       "Miller's Law",
       "Tesler's Law"
-    ],n    answer: 0,
+    ],
+    answer: 0,
     explanation: "Fitts' Law guides touch target sizing, placing important buttons within easy reach of both thumbs.",
     difficulty: "Intermediate"
   },
@@ -99,7 +101,7 @@ export const usabilityQuestions: Question[] = [
       "48x48 dp",
       "16x16 dp"
     ],
-    answer: 0,
+    answer: 2,
     explanation: "48x48 dp (or 32x32 dp on high-density displays) provides comfortable touch targets.",
     difficulty: "Beginner"
   },
@@ -111,7 +113,8 @@ export const usabilityQuestions: Question[] = [
       "Jakob's Law",
       "Tullis's Law",
       "Miller's Law"
-    ],n    answer: 1,
+    ],
+    answer: 1,
     explanation: "Jakob's Law states that users spend time on websites similar to others' expectations.",
     difficulty: "Beginner"
   },
@@ -123,7 +126,8 @@ export const usabilityQuestions: Question[] = [
       "Usability",
       "Performance",
       "Security"
-    ],n    answer: 1,
+    ],
+    answer: 1,
     explanation: "Cognitive walkthrough evaluates how intuitive a system is for new users to accomplish tasks.",
     difficulty: "Intermediate"
   },
@@ -213,10 +217,11 @@ export const usabilityQuestions: Question[] = [
       "WCAG 2.1 SC 1.4.10",
       "WCAG 2.1 SC 1.4.4",
       "WCAG 2.1 SC 1.4.2"
-    ],n    answer: 1,
+    ],
+    answer: 1,
     explanation: "WCAG 2.1 SC 1.4.10 requires content to reflow on screens narrower than 320px.",
     difficulty: "Intermediate"
-  },  
+  },
   {
     id: 18,
     question: "What does 'information scent' refer to in website navigation?",
@@ -229,7 +234,7 @@ export const usabilityQuestions: Question[] = [
     answer: 1,
     explanation: "Information scent describes how clearly navigation indicates its destination content.",
     difficulty: "Intermediate"
-  },  
+  },
   {
     id: 19,
     question: "Which heuristic emphasizes error recovery ease?",
@@ -242,7 +247,7 @@ export const usabilityQuestions: Question[] = [
     answer: 1,
     explanation: "Flexibility and efficiency allows users to recover from errors and customize workflows.",
     difficulty: "Intermediate"
-  },  
+  },
   {
     id: 20,
     question: "What does 'visual hierarchy' help users with?",
@@ -255,7 +260,7 @@ export const usabilityQuestions: Question[] = [
     answer: 1,
     explanation: "Visual hierarchy guides users' attention to the most important information first.",
     difficulty: "Beginner"
-  },  
+  },
   {
     id: 21,
     question: "Which principle suggests custom interfaces over generic ones?",
@@ -263,12 +268,12 @@ export const usabilityQuestions: Question[] = [
       "Jakob's Law",
       "Tullis's Law",
       "Miller's Law",
-      "Norman'\s Law"
+      "Norman's Law"
     ],
     answer: 3,
     explanation: "Norman's Law states that people prefer custom interfaces to generic ones.",
     difficulty: "Intermediate"
-  },  
+  },
   {
     id: 22,
     question: "What is the 'Golden Ratio' in UX often applied to?",
@@ -281,7 +286,7 @@ export const usabilityQuestions: Question[] = [
     answer: 1,
     explanation: "The Golden Ratio guides proportional spacing and layout elements for visual harmony.",
     difficulty: "Intermediate"
-  },  
+  },
   {
     id: 23,
     question: "Which Nielsen heuristic addresses user control and freedom?",
@@ -294,7 +299,7 @@ export const usabilityQuestions: Question[] = [
     answer: 0,
     explanation: "Flexibility and efficiency allows users to undo actions and customize their experience.",
     difficulty: "Intermediate"
-  },  
+  },
   {
     id: 24,
     question: "What does 'stickiness' in UX design aim to achieve?",
@@ -307,7 +312,7 @@ export const usabilityQuestions: Question[] = [
     answer: 0,
     explanation: "Stickiness keeps users engaged and returning to the product over time.",
     difficulty: "Beginner"
-  },  
+  },
   {
     id: 25,
     question: "Which principle suggests interfaces should match the real world?",

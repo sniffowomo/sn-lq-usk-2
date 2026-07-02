@@ -1,132 +1,105 @@
-// <reference path="./types.ts" />
+import type { Question, AssessmentResult } from './data/types';
+import { svelteQuestions } from './data/svelteQuestions';
+import { usabilityQuestions } from './data/usabilityQuestions';
 
-import { svelteQuestions } from './data/svelteQuestions.ts';
-import { usabilityQuestions } from './data/usabilityQuestions.ts';
-
-export interface Question {
-  id: number;
-  question: string;
-  options: string[];
-  answer: number;
-  explanation: string;
-  difficulty?: "Beginner" | "Intermediate" | "Advanced";
-}
-
-export interface AssessmentResult {
-  score: number;
-  total: number;
-  percentage: number;
-  knowledgeLevel: "Beginner" | "Learning" | "Competent" | "Proficient" | "Expert";
-  correct: number;
-  incorrect: number;
-  accuracy: number;
-}
+export type AssessmentType = 'svelte' | 'usability';
 
 export class AssessmentEngine {
-  private currentQuestionIndex = $state(0);
-  private selectedAnswers: number[];
-  private startTime: number;
+  currentIndex = 0;
+  selectedAnswers: number[];
 
-  private readonly allQuestions: Question[];
+  readonly allQuestions: Question[];
 
   constructor(questions: Question[]) {
     this.allQuestions = questions;
     this.selectedAnswers = new Array(questions.length).fill(-1);
-    this.startTime = Date.now();
   }
 
-  public get currentQuestion(): Question {
-    return this.allQuestions[this.currentQuestionIndex];
+  get currentQuestion(): Question {
+    return this.allQuestions[this.currentIndex];
   }
 
-  public get currentQuestionIndex(): number {
-    return this.currentQuestionIndex;
-  }
-
-  public get totalQuestions(): number {
+  get totalQuestions(): number {
     return this.allQuestions.length;
   }
 
-  public get progress(): number {
-    return (this.currentQuestionIndex / this.allQuestions.length) * 100;
+  get progress(): number {
+    return this.totalQuestions > 0
+      ? Math.round((this.currentIndex / this.totalQuestions) * 100)
+      : 0;
   }
 
-  public get answeredCount(): number {
-    return this.currentQuestionIndex;
+  get answeredCount(): number {
+    return this.currentIndex;
   }
 
-  public get remainingCount(): number {
-    return this.allQuestions.length - this.currentQuestionIndex - 1;
+  get remainingCount(): number {
+    return this.allQuestions.length - this.currentIndex - 1;
   }
 
-  public get score(): number {
-    let score = 0;
-    for (let i = 0; i < this.currentQuestionIndex; i++) {
-      if (this.selectedAnswers[i] === this.allQuestions[i].answer) {
-        score++;
-      }
+  get score(): number {
+    let s = 0;
+    for (let i = 0; i < this.currentIndex; i++) {
+      if (this.selectedAnswers[i] === this.allQuestions[i].answer) s++;
     }
-    return score;
+    return s;
   }
 
-  public get percentage(): number {
-    return this.totalQuestions > 0 ? Math.round((this.score / this.totalQuestions) * 100) : 0;
+  get percentage(): number {
+    return this.totalQuestions > 0
+      ? Math.round((this.score / this.totalQuestions) * 100)
+      : 0;
   }
 
-  public get knowledgeLevel(): "Beginner" | "Learning" | "Competent" | "Proficient" | "Expert" {
-    const percentage = this.percentage;
-    if (percentage <= 20) return "Beginner";
-    if (percentage <= 40) return "Learning";
-    if (percentage <= 60) return "Competent";
-    if (percentage <= 80) return "Proficient";
+  get knowledgeLevel(): "Beginner" | "Learning" | "Competent" | "Proficient" | "Expert" {
+    const p = this.percentage;
+    if (p <= 20) return "Beginner";
+    if (p <= 40) return "Learning";
+    if (p <= 60) return "Competent";
+    if (p <= 80) return "Proficient";
     return "Expert";
   }
 
-  public get correctAnswers(): number {
-    let correct = 0;
-    for (let i = 0; i < this.currentQuestionIndex; i++) {
-      if (this.selectedAnswers[i] === this.allQuestions[i].answer) {
-        correct++;
-      }
+  get correctAnswers(): number {
+    let c = 0;
+    for (let i = 0; i < this.currentIndex; i++) {
+      if (this.selectedAnswers[i] === this.allQuestions[i].answer) c++;
     }
-    return correct;
+    return c;
   }
 
-  public get incorrectAnswers(): number {
+  get incorrectAnswers(): number {
     return this.answeredCount - this.correctAnswers;
   }
 
-  public get accuracy(): number {
-    return this.answeredCount > 0 ? Math.round((this.correctAnswers / this.answeredCount) * 100) : 0;
+  get accuracy(): number {
+    return this.answeredCount > 0
+      ? Math.round((this.correctAnswers / this.answeredCount) * 100)
+      : 0;
   }
 
-  public get isCompleted(): boolean {
-    return this.currentQuestionIndex >= this.allQuestions.length;
+  get isCompleted(): boolean {
+    return this.currentIndex >= this.allQuestions.length;
   }
 
-  public selectAnswer(answerIndex: number): void {
-    this.selectedAnswers[this.currentQuestionIndex] = answerIndex;
+  selectAnswer(answerIndex: number): void {
+    this.selectedAnswers[this.currentIndex] = answerIndex;
   }
 
-  public nextQuestion(): void {
-    if (!this.isCompleted) {
-      this.currentQuestionIndex++;
-    }
+  nextQuestion(): void {
+    if (!this.isCompleted) this.currentIndex++;
   }
 
-  public previousQuestion(): void {
-    if (this.currentQuestionIndex > 0) {
-      this.currentQuestionIndex--;
-    }
+  previousQuestion(): void {
+    if (this.currentIndex > 0) this.currentIndex--;
   }
 
-  public restart(): void {
-    this.currentQuestionIndex = 0;
+  restart(): void {
+    this.currentIndex = 0;
     this.selectedAnswers = new Array(this.allQuestions.length).fill(-1);
-    this.startTime = Date.now();
   }
 
-  public getResult(): AssessmentResult {
+  getResult(): AssessmentResult {
     return {
       score: this.score,
       total: this.totalQuestions,
@@ -137,53 +110,9 @@ export class AssessmentEngine {
       accuracy: this.accuracy,
     };
   }
-
-  public getQuestionsByDifficulty(difficulty: "Beginner" | "Intermediate" | "Advanced"): Question[] {
-    return this.allQuestions.filter(q => q.difficulty === difficulty);
-  }
-
-  public getProgressByDifficulty(): Record<string, { total: number; completed: number }> {
-    const levels: Record<string, { total: number; completed: number }> = {
-      Beginner: { total: 0, completed: 0 },
-      Intermediate: { total: 0, completed: 0 },
-      Advanced: { total: 0, completed: 0 },
-    };
-
-    this.allQuestions.forEach(question => {
-      if (question.difficulty) {
-        levels[question.difficulty].total++;
-        if (this.selectedAnswers[question.id - 1] === question.answer) {
-          levels[question.difficulty].completed++;
-        }
-      }
-    });
-
-    return levels;
-  }
 }
-
-// Assessment type definitions
-export type AssessmentType = 'svelte' | 'usability';
 
 export function createAssessment(type: AssessmentType): AssessmentEngine {
   const questions = type === 'svelte' ? svelteQuestions : usabilityQuestions;
   return new AssessmentEngine(questions);
-}
-
-export function getQuestionsByType(type: AssessmentType): Question[] {
-  return type === 'svelte' ? svelteQuestions : usabilityQuestions;
-}
-
-export function getTotalQuestionsByType(type: AssessmentType): number {
-  return type === 'svelte' ? svelteQuestions.length : usabilityQuestions.length;
-}
-
-export function getDifficultyStats(questions: Question[]): Record<string, number> {
-  const stats: Record<string, number> = {};
-  questions.forEach(question => {
-    if (question.difficulty) {
-      stats[question.difficulty] = (stats[question.difficulty] || 0) + 1;
-    }
-  });
-  return stats;
 }
