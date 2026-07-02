@@ -35,7 +35,7 @@ const corner = "absolute pointer-events-none";
   <div class="{corner} bottom-0 left-0 w-5 h-5 border-b-2 border-l-2 border-neon-cyan/50 group-hover:border-neon-cyan transition-colors duration-500"></div>
   <div class="{corner} bottom-0 right-0 w-5 h-5 border-b-2 border-r-2 border-neon-cyan/50 group-hover:border-neon-cyan transition-colors duration-500"></div>
 
-  <div class="{inner} p-6">
+  <div class="{inner} p-4 sm:p-6">
     {@render children()}
   </div>
 </div>

@@ -92,7 +92,7 @@ const title = $derived(type === 'svelte' ? 'Svelte 5' : 'Usability & UX');
   <title>NEXUS // {title} Assessment</title>
 </svelte:head>
 
-<div class="min-h-screen bg-bg text-white relative overflow-hidden grid-bg flex flex-col">
+<div class="min-h-screen bg-bg text-white relative grid-bg flex flex-col">
   <!-- Ambient background -->
   <div class="fixed inset-0 pointer-events-none">
     <div class="absolute -top-40 -right-40 w-[400px] h-[400px] bg-neon-purple/5 rounded-full blur-[120px]"></div>

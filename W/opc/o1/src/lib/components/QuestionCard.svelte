@@ -73,24 +73,24 @@ const diffColors: Record<string, string> = {
     <div class="absolute top-0 left-8 right-8 h-px bg-gradient-to-r from-transparent via-neon-purple/40 to-transparent"></div>
 
     <!-- Header -->
-    <div class="flex items-center justify-between mb-6">
-      <div class="flex items-center gap-3">
-        <span class="font-display text-xs tracking-[0.3em] text-neon-cyan/70 uppercase">Query</span>
-        <span class="font-display text-lg font-bold text-white">
+    <div class="flex items-center justify-between mb-4 sm:mb-6">
+      <div class="flex items-center gap-2 sm:gap-3">
+        <span class="font-display text-[10px] sm:text-xs tracking-[0.3em] text-neon-cyan/70 uppercase">Query</span>
+        <span class="font-display text-base sm:text-lg font-bold text-white">
           <span class="neon-text-purple">{questionNumber}</span>
           <span class="text-gray-600 mx-1">/</span>
           <span class="text-gray-400">{totalQuestions}</span>
         </span>
       </div>
       {#if question.difficulty}
-        <span class="px-3 py-1 rounded text-xs font-display font-bold tracking-widest uppercase border {diffColors[question.difficulty] ?? 'text-gray-400 border-gray-600/30'}">
+        <span class="px-2 sm:px-3 py-0.5 sm:py-1 rounded text-[10px] sm:text-xs font-display font-bold tracking-widest uppercase border {diffColors[question.difficulty] ?? 'text-gray-400 border-gray-600/30'}">
           {question.difficulty}
         </span>
       {/if}
     </div>
 
     <!-- Progress bar -->
-    <div class="mb-8">
+    <div class="mb-5 sm:mb-8">
       <div class="w-full h-1 bg-surface-700/50 rounded-full overflow-hidden">
         <div
           class="h-full bg-gradient-to-r from-neon-purple via-neon-pink to-neon-cyan rounded-full transition-all duration-500"
@@ -113,9 +113,9 @@ const diffColors: Record<string, string> = {
             {option}
           </span>
           {#if showFeedback && i === question.answer}
-            <span class="ml-auto text-neon-green text-xs font-display tracking-wider">CORRECT</span>
+            <span class="ml-auto text-neon-green text-[10px] sm:text-xs font-display tracking-wider">CORRECT</span>
           {:else if showFeedback && i === selectedAnswer && i !== question.answer}
-            <span class="ml-auto text-red-400 text-xs font-display tracking-wider">WRONG</span>
+            <span class="ml-auto text-red-400 text-[10px] sm:text-xs font-display tracking-wider">WRONG</span>
           {/if}
         </button>
       {/each}
@@ -123,9 +123,9 @@ const diffColors: Record<string, string> = {
 
     <!-- Feedback -->
     {#if showFeedback && question.explanation}
-      <div class="mb-6 p-4 rounded-lg border border-neon-green/20 bg-neon-green/5 animate-scale-in">
-        <p class="text-neon-green/90 font-body text-sm leading-relaxed">
-          <span class="font-display text-xs tracking-widest uppercase text-neon-green/60 mr-2">Analysis</span>
+      <div class="mb-4 sm:mb-6 p-3 sm:p-4 rounded-lg border border-neon-green/20 bg-neon-green/5 animate-scale-in">
+        <p class="text-neon-green/90 font-body text-xs sm:text-sm leading-relaxed">
+          <span class="font-display text-[10px] sm:text-xs tracking-widest uppercase text-neon-green/60 mr-2">Analysis</span>
           {question.explanation}
         </p>
       </div>

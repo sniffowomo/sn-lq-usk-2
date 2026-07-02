@@ -1,4 +1,4 @@
-<header class="text-center mb-20 pt-8 animate-slide-up">
+<header class="text-center mb-12 sm:mb-20 pt-4 sm:pt-8 animate-slide-up">
   <div class="flex items-center justify-center gap-3 mb-6">
     <div
       class="h-px w-12 bg-gradient-to-r from-transparent to-neon-cyan/50"
@@ -13,7 +13,7 @@
   </div>
 
   <h1
-    class="font-display text-5xl md:text-7xl font-black tracking-wider uppercase mb-4"
+    class="font-display text-4xl sm:text-5xl md:text-7xl font-black tracking-wider uppercase mb-4"
   >
     <span class="neon-text-purple">SNIFFOWOMO</span><span class="neon-text-cyan"
       >SVELTE TEST</span
@@ -24,7 +24,7 @@
   >
     Knowledge Assessment Platform Svelte
   </p>
-  <p class="text-lg text-gray-400 max-w-xl mx-auto leading-relaxed font-body">
+  <p class="text-base sm:text-lg text-gray-400 max-w-xl mx-auto leading-relaxed font-body px-2">
     Choose your mission. Test your expertise. Level up your skills. Made with
     OpenCodeCli Mimov2.5free
   </p>

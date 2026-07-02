@@ -9,13 +9,13 @@ import Footer from '$lib/components/Footer.svelte';
   <title>NEXUS // Knowledge Assessment Platform</title>
 </svelte:head>
 
-<div class="min-h-screen bg-bg text-white relative overflow-hidden grid-bg flex flex-col">
+<div class="min-h-screen bg-bg text-white relative grid-bg flex flex-col">
   <AmbientBackground />
 
-  <div class="relative z-10 max-w-6xl mx-auto px-4 md:px-8 py-12">
+  <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-8 sm:py-12">
     <Hero />
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-8 max-w-4xl mx-auto">
       <AssessmentCard
         icon="S5"
         iconColor="pink"
@@ -36,7 +36,7 @@ import Footer from '$lib/components/Footer.svelte';
       />
     </div>
 
-    <div class="mt-20 animate-slide-up" style="animation-delay: 0.45s;">
+    <div class="mt-12 sm:mt-20 animate-slide-up" style="animation-delay: 0.45s;">
       <Footer />
     </div>
   </div>

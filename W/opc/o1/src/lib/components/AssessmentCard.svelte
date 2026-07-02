@@ -24,13 +24,13 @@ const variant = $derived(iconColor === 'pink' ? 'primary' as const : 'secondary'
 
 <div class="animate-slide-up" style="animation-delay: {delay};">
   <Card glow>
-    <div class="text-center space-y-6 py-6">
-      <div class="w-20 h-20 mx-auto rounded-xl border {border} {bg} flex items-center justify-center animate-float relative">
-        <span class="text-3xl font-display font-black {text} tracking-tight">{icon}</span>
+    <div class="text-center space-y-4 sm:space-y-6 py-4 sm:py-6">
+      <div class="w-16 h-16 sm:w-20 sm:h-20 mx-auto rounded-xl border {border} {bg} flex items-center justify-center animate-float relative">
+        <span class="text-2xl sm:text-3xl font-display font-black {text} tracking-tight">{icon}</span>
         <div class="absolute inset-0 rounded-xl border {pulseBorder} animate-pulse"></div>
       </div>
       <div>
-        <h2 class="font-display text-xl font-bold text-white tracking-wider uppercase mb-2">
+        <h2 class="font-display text-lg sm:text-xl font-bold text-white tracking-wider uppercase mb-2">
           {title} <span class={highlightClass}>{highlight}</span>
         </h2>
         <p class="text-gray-400 font-body text-sm leading-relaxed">
