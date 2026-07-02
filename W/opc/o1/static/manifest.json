@@ -12,21 +12,21 @@
   "categories": ["education", "productivity"],
   "icons": [
     {
-      "src": "/icon-192.svg",
+      "src": "https://res.cloudinary.com/dsec3pqkf/image/upload/v1781369198/5.gif",
       "sizes": "192x192",
-      "type": "image/svg+xml",
+      "type": "image/gif",
       "purpose": "any"
     },
     {
-      "src": "/icon-512.svg",
+      "src": "https://res.cloudinary.com/dsec3pqkf/image/upload/v1781369198/5.gif",
       "sizes": "512x512",
-      "type": "image/svg+xml",
+      "type": "image/gif",
       "purpose": "any"
     },
     {
-      "src": "/icon-maskable.svg",
+      "src": "https://res.cloudinary.com/dsec3pqkf/image/upload/v1781369198/5.gif",
       "sizes": "512x512",
-      "type": "image/svg+xml",
+      "type": "image/gif",
       "purpose": "maskable"
     }
   ]

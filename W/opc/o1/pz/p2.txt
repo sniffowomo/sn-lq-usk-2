@@ -1,0 +1,4 @@
+In the existing project, add a modal taht displays this gif (https://res.cloudinary.com/dsec3pqkf/image/upload/v1781369198/5.gif )
+every 10 seconds, with the message - "lets Go" , this modal should appear and disappear dynamically motion glow, when the modal
+appears , let it stay on screen for 3 seconds and the dynamically disappear , make the modal the same aesthetic as the rest
+of the project

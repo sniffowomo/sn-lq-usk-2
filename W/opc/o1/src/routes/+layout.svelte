@@ -1,6 +1,7 @@
 <script>
 	import './layout.css';
 	import { onMount } from 'svelte';
+	import LetsGoModal from '$lib/components/LetsGoModal.svelte';
 
 	let { children } = $props();
 
@@ -16,3 +17,5 @@
 </svelte:head>
 
 {@render children()}
+
+<LetsGoModal />
