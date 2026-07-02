@@ -36,4 +36,5 @@ curl -fsSL https://opencode.ai/install | bash
 
 ## Chosen Model
 
-1. So far you got some great output by using -
+1. So far you got some great output by using - OpenCode Zen - register with you github , and get API ,
+2. Use model - MIMO v2.5 Free - Great for panty juice
