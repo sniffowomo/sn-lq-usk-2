@@ -1,0 +1,78 @@
+Project SpecificationOverviewBuild a Svelte 5 application that contains a landing page with two interactive assessment tools.The application should feel like a premium developer product with a dark synthwave / cyberpunk aesthetic, built using TailwindCSS only (no UI libraries or component libraries).The entire application must be responsive and work well on desktop, tablet, and mobile.Technical RequirementsFrameworkSvelte 5Use Svelte 5 runes ($state, $derived, etc.)TypeScriptTailwindCSS onlyNo external UI librariesNo component frameworksNo CSS frameworks besides TailwindOrganize the project cleanly into reusable components.Suggested structure:src/
+    lib/
+        components/
+            Button.svelte
+            Card.svelte
+            ProgressBar.svelte
+            FloatingScore.svelte
+            QuestionCard.svelte
+            ResultCard.svelte
+
+        data/
+            svelteQuestions.ts
+            usabilityQuestions.ts
+
+        types.ts
+
+    routes/
+        +page.svelte
+        svelte/
+            +page.svelte
+        usability/
+            +page.svelte
+Home PageThe homepage should present the application as a professional knowledge assessment platform.Display:application titleshort descriptiontwo large cardsCard 1Svelte 5 Knowledge AssessmentButton:Start AssessmentCard 2Usability AssessmentButton:Start AssessmentCards should have hover animations.Assessment EngineBoth assessments should reuse the same assessment component.Do NOT duplicate logic.Create generic types like:Question
+Answer
+AssessmentResult
+Question FormatEach question contains:question textmaximum of 3 choicesexactly one correct answeroptional explanationExample:{
+    id: 1,
+    question: "...",
+    options: [
+        "...",
+        "...",
+        "..."
+    ],
+    answer: 1,
+    explanation: "..."
+}
+Assessment 1Topic:Svelte 5Create approximately 25 high-quality questions covering:runes$state$derived$effectsnippetscomponentspropsstoresbindingsreactivitylifecycleSSRSvelteKit basicsDifficulty:BeginnerIntermediateAdvancedMix difficulties.Assessment 2Topic:Usability / UXCreate approximately 25 questions covering:usability heuristicsaccessibilitynavigationcognitive loadvisual hierarchyformsfeedbackmobile UXconsistencyinteraction designAssessment UIEach page should display:QuestionOptions○ Option A
+
+○ Option B
+
+○ Option C
+ButtonsPreviousNextFinishDynamic ScoreThe score should update immediately after every answer.Display score in two places.Floating WidgetTop-right floating cardAlways visibleShows:Current Score
+
+14 / 25
+
+56%
+Bottom Progress SectionSticky footer or bottom card.Include:Progress barPercentageKnowledge levelKnowledge ScaleDetermine knowledge level using percentage.0–20%
+Beginner
+
+21–40%
+Learning
+
+41–60%
+Competent
+
+61–80%
+Proficient
+
+81–100%
+Expert
+Display the level with a color-coded badge.Progress IndicatorShow:QuestionQuestion 8 of 25
+Progress barAnswered countRemaining countFinal Results PageAfter submission display:Overall scorePercentageKnowledge levelCircular score indicatorStatisticsExampleCorrect
+
+18
+
+Incorrect
+
+7
+
+Accuracy
+
+72%
+Include:Restart AssessmentBack HomeState ManagementUse Svelte 5 idioms.Prefer:$state$derivedAvoid unnecessary $effect.Derived values should include:scorepercentageprogresscompleted questionsknowledge levelStylingTheme:Dark SynthwaveUse a modern premium aesthetic.Suggested palette:Background#0b0b13
+Surface#151526
+AccentPink
+Purple
+Electric Blue
+Effects:glassmorphismsoft glowneon bordersgradient buttonssmooth hover animationsanimated progress barssubtle background gradientsAvoid excessive motion.Keep interactions smooth.ResponsivenessSupport:DesktopTabletMobileOn mobile:cards stack verticallybuttons become full widthfloating score remains unobtrusivereadable typographygenerous spacingAccessibilitySupport:keyboard navigationvisible focus ringssemantic HTMLsufficient color contrastproper labelsARIA where appropriateCode QualityStrong TypeScript typingSmall reusable componentsNo duplicated assessment logicClean folder organizationMaintainable architectureClear comments only where necessaryNice-to-Have FeaturesIf time permits, implement:smooth page transitionsanimated score counteranimated progress barcompletion confetti (CSS only)localStorage persistence so progress survives page refreshexplanation shown after answering each questionability to review incorrect answers after finishingAcceptance CriteriaThe project is complete when:Home page presents two assessment tools.Both assessments share a single reusable assessment engine.Each assessment contains ~25 multiple-choice questions with a maximum of 3 options.Scores update immediately as answers are selected.A floating score widget is always visible.A bottom progress section displays score, percentage, and knowledge level.A polished results page summarizes performance.The application is fully responsive.The UI follows a cohesive dark synthwave aesthetic using only TailwindCSS.The implementation uses Svelte 5 runes and avoids unnecessary $effect usage.The codebase is modular, reusable, and easy to extend with additional assessments in the future.
