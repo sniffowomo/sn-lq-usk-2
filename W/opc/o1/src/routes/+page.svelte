@@ -1,13 +1,14 @@
 <script lang="ts">
 import Card from '$lib/components/Card.svelte';
 import Button from '$lib/components/Button.svelte';
+import Footer from '$lib/components/Footer.svelte';
 </script>
 
 <svelte:head>
   <title>NEXUS // Knowledge Assessment Platform</title>
 </svelte:head>
 
-<div class="min-h-screen bg-bg text-white relative overflow-hidden grid-bg">
+<div class="min-h-screen bg-bg text-white relative overflow-hidden grid-bg flex flex-col">
   <!-- Ambient background effects -->
   <div class="fixed inset-0 pointer-events-none">
     <!-- Top-left radial glow -->
@@ -106,11 +107,8 @@ import Button from '$lib/components/Button.svelte';
     </div>
 
     <!-- Footer -->
-    <footer class="mt-20 text-center animate-slide-up" style="animation-delay: 0.45s;">
-      <div class="h-px w-full max-w-xs mx-auto bg-gradient-to-r from-transparent via-surface-700 to-transparent mb-6"></div>
-      <p class="font-display text-[10px] tracking-[0.4em] text-gray-600 uppercase">
-        NEXUS v1.0 &middot; Assessment Engine
-      </p>
-    </footer>
+    <div class="mt-20 animate-slide-up" style="animation-delay: 0.45s;">
+      <Footer />
+    </div>
   </div>
 </div>

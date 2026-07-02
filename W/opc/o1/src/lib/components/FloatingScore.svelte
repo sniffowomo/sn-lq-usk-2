@@ -26,12 +26,12 @@ const levelConfig: Record<string, { color: string; glow: string; border: string 
 const cfg = $derived(levelConfig[knowledgeLevel] ?? levelConfig.Beginner);
 </script>
 
-<div class="fixed top-4 right-4 z-50 animate-slide-in-right {className}">
+<div class="fixed top-3 right-3 z-50 animate-slide-in-right sm:top-4 sm:right-4 {className}">
   <div class="relative group">
     <!-- Outer glow ring -->
     <div class="absolute -inset-1 rounded-2xl bg-gradient-to-br from-neon-purple/30 to-neon-cyan/20 blur-lg opacity-60 group-hover:opacity-100 transition-opacity duration-500 animate-pulse-glow pointer-events-none"></div>
 
-    <div class="relative glass-panel rounded-2xl p-5 border border-neon-purple/30 min-w-[160px]">
+    <div class="relative glass-panel rounded-2xl p-3 sm:p-5 border border-neon-purple/30 min-w-[130px] sm:min-w-[160px]">
       <!-- Scan line -->
       <div class="absolute inset-0 overflow-hidden rounded-2xl pointer-events-none">
         <div class="absolute inset-x-0 h-px bg-gradient-to-r from-transparent via-neon-cyan/40 to-transparent top-0 animate-[scan-line_4s_linear_infinite]"></div>
@@ -42,14 +42,14 @@ const cfg = $derived(levelConfig[knowledgeLevel] ?? levelConfig.Beginner);
 
       <div class="text-center space-y-2">
         <!-- Score display -->
-        <div class="font-display text-3xl font-black tracking-tight">
+        <div class="font-display text-2xl sm:text-3xl font-black tracking-tight">
           <span class="neon-text-cyan">{score}</span>
           <span class="text-gray-600 mx-1">/</span>
           <span class="text-gray-400">{total}</span>
         </div>
 
         <!-- Percentage -->
-        <div class="font-display text-lg font-bold {cfg.color} tracking-wider">
+        <div class="font-display text-base sm:text-lg font-bold {cfg.color} tracking-wider">
           {percentage}%
         </div>
 
@@ -57,7 +57,7 @@ const cfg = $derived(levelConfig[knowledgeLevel] ?? levelConfig.Beginner);
         <div class="h-px bg-gradient-to-r from-transparent via-neon-purple/30 to-transparent"></div>
 
         <!-- Knowledge level badge -->
-        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-display font-bold tracking-widest uppercase border {cfg.border} {cfg.color} {cfg.glow}">
+        <div class="inline-flex items-center gap-1.5 px-2 sm:px-3 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-xs font-display font-bold tracking-widest uppercase border {cfg.border} {cfg.color} {cfg.glow}">
           <span class="w-1.5 h-1.5 rounded-full bg-current animate-pulse"></span>
           {knowledgeLevel}
         </div>

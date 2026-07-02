@@ -55,7 +55,7 @@ const confettiPieces = Array.from({ length: 40 }, (_, i) => ({
     </div>
   {/if}
 
-  <div class="relative glass-panel rounded-2xl p-10 border border-neon-purple/20 max-w-2xl mx-auto text-center">
+  <div class="relative glass-panel rounded-2xl p-6 sm:p-10 border border-neon-purple/20 max-w-2xl mx-auto text-center">
     <!-- HUD corners -->
     <div class="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-neon-cyan/50"></div>
     <div class="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-neon-cyan/50"></div>
@@ -64,15 +64,15 @@ const confettiPieces = Array.from({ length: 40 }, (_, i) => ({
 
     <!-- Title -->
     <div class="mb-8">
-      <h2 class="font-display text-3xl font-black tracking-wider uppercase text-white mb-2">
+      <h2 class="font-display text-2xl sm:text-3xl font-black tracking-wider uppercase text-white mb-2">
         Mission <span class="neon-text-cyan">Complete</span>
       </h2>
       <div class="h-px w-32 mx-auto bg-gradient-to-r from-transparent via-neon-purple to-transparent"></div>
     </div>
 
     <!-- Circular score -->
-    <div class="mb-10">
-      <div class="w-44 h-44 mx-auto relative">
+    <div class="mb-8 sm:mb-10">
+      <div class="w-32 h-32 sm:w-44 sm:h-44 mx-auto relative">
         <svg class="w-full h-full -rotate-90" viewBox="0 0 120 120">
           <!-- Background ring -->
           <circle cx="60" cy="60" r="54" fill="none" stroke="#1a1a30" stroke-width="6" />
@@ -91,7 +91,7 @@ const confettiPieces = Array.from({ length: 40 }, (_, i) => ({
           />
         </svg>
         <div class="absolute inset-0 flex flex-col items-center justify-center">
-          <span class="font-display text-4xl font-black {cfg.color}">{pct}%</span>
+          <span class="font-display text-3xl sm:text-4xl font-black {cfg.color}">{pct}%</span>
           <span class="font-display text-[10px] tracking-[0.3em] text-gray-500 uppercase mt-1">Score</span>
         </div>
       </div>
@@ -104,19 +104,19 @@ const confettiPieces = Array.from({ length: 40 }, (_, i) => ({
     </div>
 
     <!-- Stats grid -->
-    <div class="grid grid-cols-2 gap-4 mb-8">
-      <div class="glass-panel rounded-xl p-5 border border-neon-green/20">
-        <div class="font-display text-3xl font-black text-neon-green mb-1">{result.correct}</div>
+    <div class="grid grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8">
+      <div class="glass-panel rounded-xl p-3 sm:p-5 border border-neon-green/20">
+        <div class="font-display text-2xl sm:text-3xl font-black text-neon-green mb-1">{result.correct}</div>
         <div class="font-display text-[10px] tracking-[0.3em] text-gray-500 uppercase">Correct</div>
       </div>
-      <div class="glass-panel rounded-xl p-5 border border-red-500/20">
-        <div class="font-display text-3xl font-black text-red-400 mb-1">{result.incorrect}</div>
+      <div class="glass-panel rounded-xl p-3 sm:p-5 border border-red-500/20">
+        <div class="font-display text-2xl sm:text-3xl font-black text-red-400 mb-1">{result.incorrect}</div>
         <div class="font-display text-[10px] tracking-[0.3em] text-gray-500 uppercase">Incorrect</div>
       </div>
     </div>
 
-    <div class="glass-panel rounded-xl p-5 border border-neon-purple/20 mb-8">
-      <div class="font-display text-3xl font-black {cfg.color} mb-1">{result.accuracy}%</div>
+    <div class="glass-panel rounded-xl p-3 sm:p-5 border border-neon-purple/20 mb-6 sm:mb-8">
+      <div class="font-display text-2xl sm:text-3xl font-black {cfg.color} mb-1">{result.accuracy}%</div>
       <div class="font-display text-[10px] tracking-[0.3em] text-gray-500 uppercase">Accuracy</div>
     </div>
 

@@ -31,7 +31,7 @@ const progressPct = $derived(Math.round((questionNumber / totalQuestions) * 100)
 const questionKey = $derived(question.id);
 
 function optionCls(i: number): string {
-  const base = "w-full p-5 rounded-lg border transition-all duration-300 text-left cursor-pointer flex items-center gap-4 group/opt relative overflow-hidden";
+  const base = "w-full p-3.5 sm:p-5 rounded-lg border transition-all duration-300 text-left cursor-pointer flex items-center gap-3 sm:gap-4 group/opt relative overflow-hidden";
   if (showFeedback) {
     if (i === question.answer)
       return `${base} border-neon-green/60 bg-neon-green/5 shadow-[0_0_20px_rgba(57,255,20,0.15)]`;
@@ -62,7 +62,7 @@ const diffColors: Record<string, string> = {
 
 {#key questionKey}
 <div class="animate-slide-up">
-  <div class="relative glass-panel rounded-2xl p-8 border border-neon-purple/20">
+  <div class="relative glass-panel rounded-2xl p-5 sm:p-8 border border-neon-purple/20">
     <!-- HUD corners -->
     <div class="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-neon-cyan/40"></div>
     <div class="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-neon-cyan/40"></div>
@@ -100,16 +100,16 @@ const diffColors: Record<string, string> = {
     </div>
 
     <!-- Question -->
-    <h2 class="text-xl md:text-2xl font-body font-semibold text-white/90 mb-8 leading-relaxed tracking-wide">
+    <h2 class="text-lg sm:text-xl md:text-2xl font-body font-semibold text-white/90 mb-6 sm:mb-8 leading-relaxed tracking-wide">
       {question.question}
     </h2>
 
     <!-- Options -->
-    <div class="space-y-3 mb-8">
+    <div class="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
       {#each question.options as option, i}
         <button class={optionCls(i)} onclick={() => onselect(i)}>
           <span class={numCls(i)}>{labels[i]}</span>
-          <span class="text-base font-medium {selectedAnswer === i ? 'text-neon-purple' : 'text-gray-300 group-hover/opt:text-white'} transition-colors duration-300">
+          <span class="text-sm sm:text-base font-medium {selectedAnswer === i ? 'text-neon-purple' : 'text-gray-300 group-hover/opt:text-white'} transition-colors duration-300">
             {option}
           </span>
           {#if showFeedback && i === question.answer}
@@ -132,28 +132,28 @@ const diffColors: Record<string, string> = {
     {/if}
 
     <!-- Navigation -->
-    <div class="flex justify-between items-center pt-4 border-t border-surface-700/30">
+    <div class="flex flex-col sm:flex-row justify-between items-stretch sm:items-center gap-3 sm:gap-0 pt-4 border-t border-surface-700/30">
       {#if !isFirst}
         <button
-          class="px-5 py-2.5 rounded-lg font-display text-xs tracking-widest uppercase text-gray-400 border border-surface-700/50 hover:text-neon-purple hover:border-neon-purple/40 hover:shadow-[0_0_15px_rgba(168,85,247,0.1)] transition-all duration-300"
+          class="px-5 py-2.5 rounded-lg font-display text-xs tracking-widest uppercase text-gray-400 border border-surface-700/50 hover:text-neon-purple hover:border-neon-purple/40 hover:shadow-[0_0_15px_rgba(168,85,247,0.1)] transition-all duration-300 order-2 sm:order-1"
           onclick={onprevious}
         >
           &larr; Prev
         </button>
       {:else}
-        <div></div>
+        <div class="order-2 sm:order-1"></div>
       {/if}
 
       {#if isLast}
         <button
-          class="px-8 py-2.5 rounded-lg font-display text-xs tracking-widest uppercase bg-gradient-to-r from-neon-cyan to-neon-green text-bg font-bold shadow-[0_0_20px_rgba(6,245,208,0.3)] hover:shadow-[0_0_35px_rgba(6,245,208,0.5)] transition-all duration-300 active:scale-95"
+          class="px-8 py-2.5 rounded-lg font-display text-xs tracking-widest uppercase bg-gradient-to-r from-neon-cyan to-neon-green text-bg font-bold shadow-[0_0_20px_rgba(6,245,208,0.3)] hover:shadow-[0_0_35px_rgba(6,245,208,0.5)] transition-all duration-300 active:scale-95 order-1 sm:order-2"
           onclick={onfinish}
         >
           Submit &rarr;
         </button>
       {:else}
         <button
-          class="px-8 py-2.5 rounded-lg font-display text-xs tracking-widest uppercase bg-gradient-to-r from-neon-purple to-neon-pink text-white font-bold shadow-[0_0_20px_rgba(168,85,247,0.3)] hover:shadow-[0_0_35px_rgba(168,85,247,0.5)] transition-all duration-300 active:scale-95"
+          class="px-8 py-2.5 rounded-lg font-display text-xs tracking-widest uppercase bg-gradient-to-r from-neon-purple to-neon-pink text-white font-bold shadow-[0_0_20px_rgba(168,85,247,0.3)] hover:shadow-[0_0_35px_rgba(168,85,247,0.5)] transition-all duration-300 active:scale-95 order-1 sm:order-2"
           onclick={onnext}
         >
           Next &rarr;

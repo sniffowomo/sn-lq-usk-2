@@ -1,0 +1,33 @@
+{
+  "name": "NEXUS Knowledge Assessment Platform",
+  "short_name": "NEXUS",
+  "description": "Test your expertise in Svelte 5, Usability & UX. Interactive assessments with a cyberpunk HUD interface.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#05050f",
+  "theme_color": "#05050f",
+  "orientation": "any",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["education", "productivity"],
+  "icons": [
+    {
+      "src": "/icon-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-maskable.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}

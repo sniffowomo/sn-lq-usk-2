@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7"/>
+      <stop offset="50%" stop-color="#ff2d78"/>
+      <stop offset="100%" stop-color="#06f5d0"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#06f5d0"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="96" fill="#05050f"/>
+  <!-- Grid lines -->
+  <line x1="0" y1="128" x2="512" y2="128" stroke="#a855f7" stroke-opacity="0.06" stroke-width="1"/>
+  <line x1="0" y1="256" x2="512" y2="256" stroke="#a855f7" stroke-opacity="0.06" stroke-width="1"/>
+  <line x1="0" y1="384" x2="512" y2="384" stroke="#a855f7" stroke-opacity="0.06" stroke-width="1"/>
+  <line x1="128" y1="0" x2="128" y2="512" stroke="#a855f7" stroke-opacity="0.06" stroke-width="1"/>
+  <line x1="256" y1="0" x2="256" y2="512" stroke="#a855f7" stroke-opacity="0.06" stroke-width="1"/>
+  <line x1="384" y1="0" x2="384" y2="512" stroke="#a855f7" stroke-opacity="0.06" stroke-width="1"/>
+  <!-- Hexagon border -->
+  <polygon points="256,48 440,148 440,364 256,464 72,364 72,148" fill="none" stroke="url(#g1)" stroke-width="3" stroke-opacity="0.4" filter="url(#glow)"/>
+  <!-- N letter -->
+  <text x="256" y="300" text-anchor="middle" font-family="monospace" font-weight="900" font-size="220" fill="url(#g2)" filter="url(#glow)">N</text>
+  <!-- Accent dots -->
+  <circle cx="140" cy="140" r="4" fill="#06f5d0" opacity="0.8"/>
+  <circle cx="372" cy="140" r="4" fill="#a855f7" opacity="0.8"/>
+  <circle cx="140" cy="372" r="4" fill="#a855f7" opacity="0.8"/>
+  <circle cx="372" cy="372" r="4" fill="#06f5d0" opacity="0.8"/>
+  <!-- Bottom line -->
+  <rect x="160" y="410" width="192" height="2" rx="1" fill="url(#g2)" opacity="0.5"/>
+</svg>

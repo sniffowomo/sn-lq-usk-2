@@ -4,6 +4,7 @@ import { createAssessment, AssessmentEngine } from '$lib/AssessmentEngine';
 import QuestionCard from '$lib/components/QuestionCard.svelte';
 import FloatingScore from '$lib/components/FloatingScore.svelte';
 import ResultCard from '$lib/components/ResultCard.svelte';
+import Footer from '$lib/components/Footer.svelte';
 import type { AssessmentResult, Question } from '$lib/data/types.ts';
 
 interface Props {
@@ -91,7 +92,7 @@ const title = $derived(type === 'svelte' ? 'Svelte 5' : 'Usability & UX');
   <title>NEXUS // {title} Assessment</title>
 </svelte:head>
 
-<div class="min-h-screen bg-bg text-white relative overflow-hidden grid-bg">
+<div class="min-h-screen bg-bg text-white relative overflow-hidden grid-bg flex flex-col">
   <!-- Ambient background -->
   <div class="fixed inset-0 pointer-events-none">
     <div class="absolute -top-40 -right-40 w-[400px] h-[400px] bg-neon-purple/5 rounded-full blur-[120px]"></div>
@@ -99,7 +100,7 @@ const title = $derived(type === 'svelte' ? 'Svelte 5' : 'Usability & UX');
     <div class="absolute inset-x-0 h-px bg-gradient-to-r from-transparent via-neon-purple/15 to-transparent top-0 animate-[scan-line_8s_linear_infinite]"></div>
   </div>
 
-  <div class="relative z-10 max-w-4xl mx-auto px-4 md:px-8 py-8 space-y-6">
+  <div class="relative z-10 max-w-4xl mx-auto px-3 sm:px-4 md:px-8 py-6 sm:py-8 space-y-4 sm:space-y-6">
     {#if !completed}
       <FloatingScore {score} {total} />
 
@@ -117,7 +118,7 @@ const title = $derived(type === 'svelte' ? 'Svelte 5' : 'Usability & UX');
 
       <!-- Bottom HUD panel -->
       <div class="max-w-2xl mx-auto animate-slide-up" style="animation-delay: 0.2s;">
-        <div class="relative glass-panel rounded-xl p-5 border border-neon-purple/15">
+        <div class="relative glass-panel rounded-xl p-4 sm:p-5 border border-neon-purple/15">
           <!-- HUD corners -->
           <div class="absolute top-0 left-0 w-4 h-4 border-t border-l border-neon-cyan/30"></div>
           <div class="absolute top-0 right-0 w-4 h-4 border-t border-r border-neon-cyan/30"></div>
@@ -141,9 +142,9 @@ const title = $derived(type === 'svelte' ? 'Svelte 5' : 'Usability & UX');
             </div>
           </div>
 
-          <div class="flex justify-between items-center">
-            <span class="font-display text-[10px] tracking-widest text-gray-600 uppercase">
-              Q{currentIdx + 1} / {total} &middot; {currentIdx} done &middot; {total - currentIdx - 1} left
+          <div class="flex flex-wrap justify-between items-center gap-2">
+            <span class="font-display text-[9px] sm:text-[10px] tracking-widest text-gray-600 uppercase">
+              Q{currentIdx + 1}/{total} &middot; {currentIdx} done &middot; {total - currentIdx - 1} left
             </span>
             <span class="px-3 py-1 rounded text-[10px] font-display font-bold tracking-widest uppercase border {levelColors[knowledgeLevel] ?? levelColors.Beginner}">
               {knowledgeLevel}
@@ -165,5 +166,9 @@ const title = $derived(type === 'svelte' ? 'Svelte 5' : 'Usability & UX');
         </button>
       </div>
     {/if}
+
+    <div class="mt-auto pt-8">
+      <Footer />
+    </div>
   </div>
 </div>
