@@ -35,3 +35,5 @@ curl -fsSL https://opencode.ai/install | bash
 1. By default the `nemotron` model is shit , cant handle complex task so you have choose another model in openapi router
 
 ## Chosen Model
+
+1. So far you got some great output by using -

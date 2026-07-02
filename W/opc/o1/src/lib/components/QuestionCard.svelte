@@ -28,91 +28,138 @@ let {
 const isFirst = $derived(questionNumber === 1);
 const isLast = $derived(questionNumber === totalQuestions);
 const progressPct = $derived(Math.round((questionNumber / totalQuestions) * 100));
+const questionKey = $derived(question.id);
 
 function optionCls(i: number): string {
-  const base =
-    "w-full p-5 rounded-xl border-2 transition-all duration-200 text-left cursor-pointer flex items-center gap-4";
+  const base = "w-full p-5 rounded-lg border transition-all duration-300 text-left cursor-pointer flex items-center gap-4 group/opt relative overflow-hidden";
   if (showFeedback) {
-    if (i === question.answer) return `${base} border-green-500 bg-green-900/20`;
+    if (i === question.answer)
+      return `${base} border-neon-green/60 bg-neon-green/5 shadow-[0_0_20px_rgba(57,255,20,0.15)]`;
     if (i === selectedAnswer && i !== question.answer)
-      return `${base} border-red-500 bg-red-900/20`;
+      return `${base} border-red-500/60 bg-red-500/5 shadow-[0_0_20px_rgba(239,68,68,0.15)]`;
   }
   if (i === selectedAnswer)
-    return `${base} border-purple-500 bg-purple-900/20 shadow-lg shadow-purple-500/10`;
-  return `${base} border-surface-700 bg-surface-800 hover:border-purple-500/50 hover:bg-purple-900/10`;
+    return `${base} border-neon-purple/70 bg-neon-purple/10 shadow-[0_0_20px_rgba(168,85,247,0.2)]`;
+  return `${base} border-surface-700/60 bg-surface-800/40 hover:border-neon-purple/40 hover:bg-neon-purple/5 hover:shadow-[0_0_15px_rgba(168,85,247,0.1)]`;
 }
 
 function numCls(i: number): string {
-  const base =
-    "w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium shrink-0 transition-colors duration-200";
-  if (i === selectedAnswer) return `${base} bg-purple-600 text-white`;
-  if (showFeedback && i === question.answer) return `${base} bg-green-600 text-white`;
-  if (showFeedback && i === selectedAnswer) return `${base} bg-red-600 text-white`;
-  return `${base} bg-surface-700 text-gray-400`;
+  const base = "w-9 h-9 rounded-lg flex items-center justify-center text-sm font-display font-bold tracking-wider shrink-0 transition-all duration-300 border";
+  if (i === selectedAnswer) return `${base} bg-neon-purple/20 border-neon-purple/60 text-neon-purple shadow-[0_0_10px_rgba(168,85,247,0.3)]`;
+  if (showFeedback && i === question.answer) return `${base} bg-neon-green/20 border-neon-green/60 text-neon-green shadow-[0_0_10px_rgba(57,255,20,0.3)]`;
+  if (showFeedback && i === selectedAnswer) return `${base} bg-red-500/20 border-red-500/60 text-red-400`;
+  return `${base} bg-surface-700/50 border-surface-600/30 text-gray-500 group-hover/opt:border-neon-purple/30 group-hover/opt:text-neon-purple/70`;
 }
 
 const labels = ["A", "B", "C"];
+
+const diffColors: Record<string, string> = {
+  Beginner: "text-blue-400 border-blue-500/30 bg-blue-500/10",
+  Intermediate: "text-neon-yellow border-neon-yellow/30 bg-neon-yellow/10",
+  Advanced: "text-neon-pink border-neon-pink/30 bg-neon-pink/10",
+};
 </script>
 
-<div class="bg-surface-900/90 backdrop-blur-lg rounded-3xl p-8 border border-surface-800 shadow-2xl max-w-2xl mx-auto relative overflow-hidden">
-  <div class="mb-6">
-    <div class="flex justify-between text-sm text-gray-400 mb-2">
-      <span>Question {questionNumber} of {totalQuestions}</span>
-      <span>{progressPct}%</span>
-    </div>
-    <div class="w-full h-2 bg-surface-800 rounded-full overflow-hidden">
-      <div
-        class="h-full bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600 rounded-full transition-all duration-500"
-        style="width: {progressPct}%"
-      ></div>
-    </div>
-  </div>
+{#key questionKey}
+<div class="animate-slide-up">
+  <div class="relative glass-panel rounded-2xl p-8 border border-neon-purple/20">
+    <!-- HUD corners -->
+    <div class="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-neon-cyan/40"></div>
+    <div class="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-neon-cyan/40"></div>
+    <div class="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-neon-cyan/40"></div>
+    <div class="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-neon-cyan/40"></div>
 
-  <h2 class="text-xl font-semibold text-white mb-8 leading-relaxed">{question.question}</h2>
+    <!-- Top accent line -->
+    <div class="absolute top-0 left-8 right-8 h-px bg-gradient-to-r from-transparent via-neon-purple/40 to-transparent"></div>
 
-  <div class="space-y-3 mb-8">
-    {#each question.options as option, i}
-      <button class={optionCls(i)} onclick={() => onselect(i)}>
-        <span class={numCls(i)}>{labels[i]}</span>
-        <span class="text-lg font-medium {selectedAnswer === i ? 'text-purple-300' : 'text-gray-200'}">
-          {option}
+    <!-- Header -->
+    <div class="flex items-center justify-between mb-6">
+      <div class="flex items-center gap-3">
+        <span class="font-display text-xs tracking-[0.3em] text-neon-cyan/70 uppercase">Query</span>
+        <span class="font-display text-lg font-bold text-white">
+          <span class="neon-text-purple">{questionNumber}</span>
+          <span class="text-gray-600 mx-1">/</span>
+          <span class="text-gray-400">{totalQuestions}</span>
         </span>
-      </button>
-    {/each}
-  </div>
-
-  {#if showFeedback && question.explanation}
-    <div class="mb-6 p-4 rounded-xl bg-surface-800/50 border border-surface-700">
-      <p class="text-green-400 font-medium text-sm">{question.explanation}</p>
+      </div>
+      {#if question.difficulty}
+        <span class="px-3 py-1 rounded text-xs font-display font-bold tracking-widest uppercase border {diffColors[question.difficulty] ?? 'text-gray-400 border-gray-600/30'}">
+          {question.difficulty}
+        </span>
+      {/if}
     </div>
-  {/if}
 
-  <div class="flex justify-between items-center">
-    {#if !isFirst}
-      <button
-        class="px-5 py-2.5 rounded-lg text-gray-400 hover:text-white hover:bg-surface-800 transition-colors"
-        onclick={onprevious}
-      >
-        Previous
-      </button>
-    {:else}
-      <div></div>
+    <!-- Progress bar -->
+    <div class="mb-8">
+      <div class="w-full h-1 bg-surface-700/50 rounded-full overflow-hidden">
+        <div
+          class="h-full bg-gradient-to-r from-neon-purple via-neon-pink to-neon-cyan rounded-full transition-all duration-500"
+          style="width: {progressPct}%"
+        ></div>
+      </div>
+    </div>
+
+    <!-- Question -->
+    <h2 class="text-xl md:text-2xl font-body font-semibold text-white/90 mb-8 leading-relaxed tracking-wide">
+      {question.question}
+    </h2>
+
+    <!-- Options -->
+    <div class="space-y-3 mb-8">
+      {#each question.options as option, i}
+        <button class={optionCls(i)} onclick={() => onselect(i)}>
+          <span class={numCls(i)}>{labels[i]}</span>
+          <span class="text-base font-medium {selectedAnswer === i ? 'text-neon-purple' : 'text-gray-300 group-hover/opt:text-white'} transition-colors duration-300">
+            {option}
+          </span>
+          {#if showFeedback && i === question.answer}
+            <span class="ml-auto text-neon-green text-xs font-display tracking-wider">CORRECT</span>
+          {:else if showFeedback && i === selectedAnswer && i !== question.answer}
+            <span class="ml-auto text-red-400 text-xs font-display tracking-wider">WRONG</span>
+          {/if}
+        </button>
+      {/each}
+    </div>
+
+    <!-- Feedback -->
+    {#if showFeedback && question.explanation}
+      <div class="mb-6 p-4 rounded-lg border border-neon-green/20 bg-neon-green/5 animate-scale-in">
+        <p class="text-neon-green/90 font-body text-sm leading-relaxed">
+          <span class="font-display text-xs tracking-widest uppercase text-neon-green/60 mr-2">Analysis</span>
+          {question.explanation}
+        </p>
+      </div>
     {/if}
 
-    {#if isLast}
-      <button
-        class="px-6 py-2.5 rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium hover:from-purple-700 hover:to-pink-700 transition-all shadow-lg"
-        onclick={onfinish}
-      >
-        Finish
-      </button>
-    {:else}
-      <button
-        class="px-6 py-2.5 rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium hover:from-purple-700 hover:to-pink-700 transition-all shadow-lg"
-        onclick={onnext}
-      >
-        Next
-      </button>
-    {/if}
+    <!-- Navigation -->
+    <div class="flex justify-between items-center pt-4 border-t border-surface-700/30">
+      {#if !isFirst}
+        <button
+          class="px-5 py-2.5 rounded-lg font-display text-xs tracking-widest uppercase text-gray-400 border border-surface-700/50 hover:text-neon-purple hover:border-neon-purple/40 hover:shadow-[0_0_15px_rgba(168,85,247,0.1)] transition-all duration-300"
+          onclick={onprevious}
+        >
+          &larr; Prev
+        </button>
+      {:else}
+        <div></div>
+      {/if}
+
+      {#if isLast}
+        <button
+          class="px-8 py-2.5 rounded-lg font-display text-xs tracking-widest uppercase bg-gradient-to-r from-neon-cyan to-neon-green text-bg font-bold shadow-[0_0_20px_rgba(6,245,208,0.3)] hover:shadow-[0_0_35px_rgba(6,245,208,0.5)] transition-all duration-300 active:scale-95"
+          onclick={onfinish}
+        >
+          Submit &rarr;
+        </button>
+      {:else}
+        <button
+          class="px-8 py-2.5 rounded-lg font-display text-xs tracking-widest uppercase bg-gradient-to-r from-neon-purple to-neon-pink text-white font-bold shadow-[0_0_20px_rgba(168,85,247,0.3)] hover:shadow-[0_0_35px_rgba(168,85,247,0.5)] transition-all duration-300 active:scale-95"
+          onclick={onnext}
+        >
+          Next &rarr;
+        </button>
+      {/if}
+    </div>
   </div>
 </div>
+{/key}
