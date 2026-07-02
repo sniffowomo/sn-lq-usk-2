@@ -37,4 +37,14 @@ curl -fsSL https://opencode.ai/install | bash
 ## Chosen Model
 
 1. So far you got some great output by using - OpenCode Zen - register with you github , and get API ,
-2. Use model - MIMO v2.5 Free - Great for panty juice
+2. Use model - MIMO v2.5 Free - Great for panty juic
+3. Also note , if you want make changes go back to the same session
+4. Note that this also has limits but its more generous , overall this model has more bigger boobs and hairy smelly pussy
+5.
+
+```sh
+opencode session - view all session
+
+# This was the session used for make o1
+opencode -s opencode -s ses_0dd34e38dffejqQ6eKz3pAuZl8
+```
