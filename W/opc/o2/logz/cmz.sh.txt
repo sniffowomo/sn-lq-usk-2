@@ -1,0 +1,39 @@
+[1;94m · · ────── ꒰ঌ·✦·໒꒱ ────── · ·
+[1;94m · · ────── PantySmellling ────── · ·
+[1;94m · · ────── ꒰ঌ·✦·໒꒱ ────── · ·
+Thu Jul 30 11:44:38 AM UTC 2026
+Executing:[1;95mcurl ifconfig.co[0m
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0<!DOCTYPE html><html lang="en-US"><head><title>Just a moment...</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="robots" content="noindex,nofollow"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="content-security-policy" content="default-src &#39;none&#39;; script-src &#39;nonce-8BbCR6gcZy82h22tis9nG4&#39; &#39;unsafe-eval&#39; https://challenges.cloudflare.com; script-src-attr &#39;none&#39;; style-src &#39;unsafe-inline&#39;; img-src &#39;self&#39; https://challenges.cloudflare.com; connect-src &#39;self&#39; https://challenges.cloudflare.com; frame-src &#39;self&#39; https://challenges.cloudflare.com blob:; child-src &#39;self&#39; https://challenges.cloudflare.com blob:; worker-src blob:; form-action http: https:; base-uri &#39;self&#39;"><style>*{box-sizing:border-box;margin:0;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%;color:#313131;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"}body{display:flex;flex-direction:column;height:100vh;min-height:100vh}.main-content{margin:8rem auto;padding-left:1.5rem;max-width:60rem}@media (width <= 720px){.main-content{margin-top:4rem}}#challenge-error-text{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI0IyMEYwMyIgZD0iTTE2IDNhMTMgMTMgMCAxIDAgMTMgMTNBMTMuMDE1IDEzLjAxNSAwIDAgMCAxNiAzbTAgMjRhMTEgMTEgMCAxIDEgMTEtMTEgMTEuMDEgMTEuMDEgMCAwIDEtMTEgMTEiLz48cGF0aCBmaWxsPSIjQjIwRjAzIiBkPSJNMTcuMDM4IDE4LjYxNUgxNC44N0wxNC41NjMgOS41aDIuNzgzem0tMS4wODQgMS40MjdxLjY2IDAgMS4wNTcuMzg4LjQwNy4zODkuNDA3Ljk5NCAwIC41OTYtLjQwNy45ODQtLjM5Ny4zOS0xLjA1Ny4zODktLjY1IDAtMS4wNTYtLjM4OS0uMzk4LS4zODktLjM5OC0uOTg0IDAtLjU5Ny4zOTgtLjk4NS40MDYtLjM5NyAxLjA1Ni0uMzk3Ii8+PC9zdmc+");background-repeat:no-repeat;background-size:contain;padding-left:34px}</style><meta http-equiv="refresh" content="360"></head><body><div class="main-wrapper" role="main"><div class="main-content"><noscript><div class="h2"><span id="challenge-error-text">Enable JavaScript and cookies to continue</span></div></noscript></div></div><script nonce="8BbCR6gcZy82h22tis9nG4">(function(){window._cf_chl_opt = {cFPWv: 'b',cH: 'jXI08R9x6b0AU9LrgcBc.ryiIGManmOoyd.0kq..Ycw-1785411878-1.2.1.1-XVjq0JFT.2VXgDJrAlHDWezIZsVyDwIi4OTmf43be8xtTM5WELMxIq2D3VssIGaA',cITimeS: '1785411878',cN: '8BbCR6gcZy82h22tis9nG4',cRay: 'a2341cd23c923df6',cTplB: '0',cTplC:0,cTplO:0,cTplV:5,cType: 'managed',cUPMDTk:"/?__cf_chl_tk=BxlTs0TFxvDyNss.gdU4GtmzQNuTiFnSp2IWg4CH3jY-1785411878-1.0.1.1-vcHtPA1y1pxZ_Dwpl4P78w18VRlqRfMEW4xLJ1W6q0U",cvId: '3',cZone: 'ifconfig.co',fa:"/?__cf_chl_f_tk=BxlTs0TFxvDyNss.gdU4GtmzQNuTiFnSp2IWg4CH3jY-1785411878-1.0.1.1-vcHtPA1y1pxZ_Dwpl4P78w18VRlqRfMEW4xLJ1W6q0U",md: 'QoAys0PGuq0YHVyyUS9u4bo2iUb5DDmVL.21LIAI47Y-1785411878-1.2.1.1-uZDYsKDrqoTPldHW0lnwJJQWZzwmL.BIbq_PTdoWVA2NepY5bTodZzurnly6rm6Du7PE4S62SZD9oDz9bZwY8u1ccJGsNstYaMyTD5oo7aEFkJZLwQbQk2wQ5Vhh_rLmVC6hps4YXJpcJrcpCJifj8T0c1Gi3gBM_YTBTkw1lL9yw1g_8DvbW4Lf87feigLLsBkHmIy.UM5HnR69FBTKSU.YXuTgbpkAxjhNuUtpAejTsXaAAnGvgpYUVI_BVBF6RVy.M.fjAUm03qw1xi1s2B4KCTDHV6rbQZilIquD3jUipfGE_uOWMdTGMu4yYWswIo7VQvwZiz6GRgskgeP8KSXw3ez2kEPGI3sJupsQLzDDwykRm0x6QmvIC.rxACC2KqKfJPyBUOHv1XVRWoY8DpqsESzFPrFRf_Mk.zZlkCB6sMCDCdn6vKDnj7edbLODr3_YIkvjZtB2ftyyJ.iVgRrTQIQvj20mQJ_gFWGhnzDX1Q6uVI3XGlMgWHhiztLCaVASXNYiz._NK4X9HSkK2Dipz2vhY_vj.FlhjVHNQRkk3q_5HHz9oVW3fN9.Ijmd03UF0AhbqbUlrDYRwg2eFKlkjfoXVcB930ECplXf2.T3ReOPGw7RNMHg953ROlCqpWZF7IFWE6M1R8iU5y3zBjvIyX.wk43fFA4CcMDsU7rjUpZDLQQQaqkgVF0cRBlVj_5CUdkS4.F0rU7664awEdp6lgbCFVEpuJtQwyCH8aCWk7Wh_LrOGY2JpGPUozWyQKUl_GaqX3JSfstNvkVlFHJPvd_b5f3b0.32aH9wWNAG5Tt0q0T9XDOLYMCMIdM68wZ8ZRjGNwakF9foEMqRt2Ro1QVbVOtsNt2eauBchJ5BD2Bo.ccERCkcafI_7y9F',mdrd: 'iOorqOa6tj1MKHe9qqFLp84uRioyIHqKZzldFkeV6IM-1785411878-1.2.1.1-T2CUPh2do9GzA5nxuPs0hZanzRE1ZELbEUFXmOVF2cys.0fCIjGbWgzpDgOpo2ZgljgC2lbIzynx.Ul100  5188  100  5188    0     0   499k      0 --:--:-- --:--:-- --:--:--  506k
+tJWFTchFlg7F5X9MtSB0auBBAxlmJP8xh41v_OaEOcY3j.y0SCYVn5FCkvy9FKnWoeDvI4FYpftNsXaXy0zVccL6NPPvQeKqPT6pL0D6TARGgR3yx47l.yh00gRuLhGXae89Z6fXzjaY76CHec066K4BC47I',};var a = document.createElement('script');a.nonce = '8BbCR6gcZy82h22tis9nG4';a.src = '/cdn-cgi/challenge-platform/h/b/orchestrate/chl_page/v1?ray=a2341cd23c923df6';window._cf_chl_opt.cOgUHash = location.hash === '' && location.href.indexOf('#') !== -1 ? '#' : location.hash;window._cf_chl_opt.cOgUQuery = location.search === '' && location.href.slice(0, location.href.length - window._cf_chl_opt.cOgUHash.length).indexOf('?') !== -1 ? '?' : location.search;if (window.history && window.history.replaceState) {var ogU = location.pathname + window._cf_chl_opt.cOgUQuery + window._cf_chl_opt.cOgUHash;history.replaceState(null, null,"/?__cf_chl_rt_tk=BxlTs0TFxvDyNss.gdU4GtmzQNuTiFnSp2IWg4CH3jY-1785411878-1.0.1.1-vcHtPA1y1pxZ_Dwpl4P78w18VRlqRfMEW4xLJ1W6q0U"+ window._cf_chl_opt.cOgUHash);a.onload = function() {history.replaceState(null, null, ogU);}}document.getElementsByTagName('head')[0].appendChild(a);}());</script></body></html>[1;92mDone!
+───── ⋆⋅☆⋅⋆ ─────[0m
+───── ⋆⋅☆⋅⋆ ─────[0m
+───── ⋆⋅☆⋅⋆ ─────[0m
+[1;94m · · ────── ꒰ঌ·✦·໒꒱ ────── · ·
+[1;94m · · ────── PantySmellling ────── · ·
+[1;94m · · ────── ꒰ঌ·✦·໒꒱ ────── · ·
+Thu Jul 30 12:48:21 PM UTC 2026
+Executing:[1;95mnpx skills add https://github.com/cloudflare/skills[0m
+[1;94m · · ────── ꒰ঌ·✦·໒꒱ ────── · ·
+[1;94m · · ────── PantySmellling ────── · ·
+[1;94m · · ────── ꒰ঌ·✦·໒꒱ ────── · ·
+Thu Jul 30 12:52:28 PM UTC 2026
+Executing:[1;95mbunx skills add https://github.com/cloudflare/skills[0m
+
+[38;5;250m███████╗██╗  ██╗██╗██╗     ██╗     ███████╗[0m
+[38;5;248m██╔════╝██║ ██╔╝██║██║     ██║     ██╔════╝[0m
+[38;5;245m███████╗█████╔╝ ██║██║     ██║     ███████╗[0m
+[38;5;243m╚════██║██╔═██╗ ██║██║     ██║     ╚════██║[0m
+[38;5;240m███████║██║  ██╗██║███████╗███████╗███████║[0m
+[38;5;238m╚══════╝╚═╝  ╚═╝╚═╝╚══════╝╚══════╝╚══════╝[0m
+
+┌   skills 
+[?25l│
+◇  Source: https://github.com/cloudflare/skills.git
+[?25h[?25l│
+◒  Cloning repository…[1D[0K[1G[J◐  Cloning repository…[1G[J◓  Cloning repository…[1G[J◑  Cloning repository…[1G[J◒  Cloning repository…[1G[J◐  Cloning repository…[1G[J◓  Cloning repository…[1G[J◑  Cloning repository…[1G[J◒  Cloning repository….[1G[J◐  Cloning repository….[1G[J◓  Cloning repository….[?25h[1G[J◇  Canceled
+[?25h[1;92mDone!
+───── ⋆⋅☆⋅⋆ ─────[0m
+───── ⋆⋅☆⋅⋆ ─────[0m
+───── ⋆⋅☆⋅⋆ ─────[0m

@@ -17,9 +17,10 @@
 
 2. Working dirz here
 
-|      Dir      |           What           |
-| :-----------: | :----------------------: |
-| [`o1`](./o1/) | Initial OpenCode Testing |
+|      Dir      |            What             |
+| :-----------: | :-------------------------: |
+| [`o1`](./o1/) |  Initial OpenCode Testing   |
+| [`o2`](./o2/) | Tutorial of opencode.school |
 
 # Urls
 
