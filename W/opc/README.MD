@@ -2,15 +2,24 @@
 <h2><i> OpenCode CLI Work </i></h2>
 
 1. [What](#what)
-2. [Urls](#urls)
-3. [Cmds](#cmds)
-4. [Regarding The model](#regarding-the-model)
+2. [Dirz](#dirz)
+3. [Urls](#urls)
+4. [Cmds](#cmds)
+5. [Regarding The model](#regarding-the-model)
    1. [Chosen Model](#chosen-model)
 
 # What
 
 1. Here you will test how far OpenCode can really go for making a webapp
-2. Your use case case wanting to see how it function with a full svelte app, for making something
+2. Your use case case wanting to see how it function with a full svelte app, for making somethin
+
+# Dirz
+
+2. Working dirz here
+
+|      Dir      |           What           |
+| :-----------: | :----------------------: |
+| [`o1`](./o1/) | Initial OpenCode Testing |
 
 # Urls
 
